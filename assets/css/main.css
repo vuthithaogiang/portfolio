@@ -1226,11 +1226,6 @@ body {
   --nav-height: 100px;
   background-color: var(--bg-color);
 }
-@media (max-width: 991.98px) {
-  .header {
-    background-color: red;
-  }
-}
 
 .top-bar {
   display: grid;
@@ -1248,6 +1243,11 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+@media (max-width: 991.98px) {
+  .top-bar__actions {
+    display: none;
+  }
 }
 .top-bar__btn {
   height: 44px;
@@ -1281,9 +1281,19 @@ body {
 .introduction {
   margin-top: 40px;
 }
+@media (max-width: 991.98px) {
+  .introduction {
+    margin-top: 10px;
+  }
+}
 .introduction__inner {
   display: flex;
   gap: 32px;
+}
+@media (max-width: 991.98px) {
+  .introduction__inner {
+    flex-direction: column;
+  }
 }
 .introduction__left {
   flex: 1;
@@ -1294,11 +1304,28 @@ body {
   object-fit: cover;
   border-radius: 50%;
 }
+@media (max-width: 1199.98px) {
+  .introduction__avatar {
+    width: 90px;
+    height: 90px;
+  }
+}
 .introduction__name {
   margin-top: 24px;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.5;
+}
+@media (max-width: 1199.98px) {
+  .introduction__name {
+    font-size: 2rem;
+    margin-top: 9px;
+  }
+}
+@media (max-width: 991.98px) {
+  .introduction__name {
+    display: none;
+  }
 }
 .introduction__quote {
   margin-top: 12px;
@@ -1306,6 +1333,11 @@ body {
   font-weight: 700;
   max-width: 600px;
   line-height: 1.2;
+}
+@media (max-width: 991.98px) {
+  .introduction__quote {
+    font-size: 4.4rem;
+  }
 }
 .introduction__quote strong {
   color: transparent;
@@ -1341,6 +1373,7 @@ body {
   font-size: 1.5rem;
 }
 .introduction__right {
+  height: fit-content;
   flex: 1;
   position: relative;
   border-radius: 30px;
@@ -1360,6 +1393,11 @@ body {
   backdrop-filter: blur(65.0278320313px);
   border-radius: inherit;
   padding: 38px 36px;
+}
+@media (max-width: 1199.98px) {
+  .introduction__thumbs {
+    padding: 27px 30px;
+  }
 }
 .introduction__slide {
   position: relative;
