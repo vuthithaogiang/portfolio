@@ -1,8 +1,14 @@
+@use "../abstracts";
+
 .header{
     //background-color: #fff;
    --nav-height: 100px;
   
    background-color: var(--bg-color);
+
+   @include abstracts.breakpoint(lg) {
+    background-color: red;
+   } 
  
 }
 

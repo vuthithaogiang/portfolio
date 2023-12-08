@@ -1226,6 +1226,11 @@ body {
   --nav-height: 100px;
   background-color: var(--bg-color);
 }
+@media (max-width: 991.98px) {
+  .header {
+    background-color: red;
+  }
+}
 
 .top-bar {
   display: grid;
