@@ -230,21 +230,6 @@ const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);
 
 
-window.addEventListener("template-loaded", () => {
-    // GO TO TOP
-var goToTopBtn = document.getElementById("back-to-top-btn");
-
-// Show or hide the button based on the scroll position
-window.onscroll = function() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    goToTopBtn.style.display = "block";
-  } else {
-    goToTopBtn.style.display = "none";
-  }
-};
-
-});
-
 
 // Scroll to the top when the button is clicked
 function goToTop() {
@@ -253,6 +238,32 @@ function goToTop() {
         top: 0,
         behavior: 'smooth',
     });
-//  document.body.scrollTop = 0; // For Safari
+  //  document.body.scrollTop = 0; // For Safari
   //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+
+window.addEventListener("template-loaded", () => {
+    // GO TO TOP
+   var alterforwork = document.getElementById("alter-for-work");
+   var goToTopBtn = document.getElementById("back-to-top-btn");
+   var btnHide = document.getElementById("hide-notification");
+
+   
+
+   // Show or hide the button based on the scroll position
+   window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      alterforwork.style.display = "block";
+      goToTopBtn.style.display = "block";
+    } else {
+        alterforwork.style.display = "none";
+        goToTopBtn.style.display = "none";
+    }
+
+    btnHide.onclick = () => {
+        alterforwork.style.display = "none";
+    }
+};
+
+});
