@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Vu Thi Thao Giang</title>
+    <title>Vu Thi Thao Giang | Portfolio</title>
 
 
     <!-- Favicon -->
@@ -19,17 +19,69 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="./assets/css/main.css">
+
+<!-- Scripts -->
+<script src="./assets/js/scripts.js"></script>
 </head>
 
-<style>
-    body{
-        font-family: 'Inter', sans-serif;
-        color: blue;
-    }
-</style>
-<body>
 
-    <h1>Welcome</h1>
+<body>
+   <div class="container">
+        <!-- Header -->
+        <header class="header" id="header"></header>
+        <script>
+            load("#header", "./template/header.html");
+        </script>
+        
+        <!-- Main -->
+        <main>
+            <!-- Introduction -->
+            <div class="introduction">
+                <div class="introduction__inner">
+                    <!-- Left -->
+                    <div class="introduction__left">
+                        <img class="introduction__avatar" alt="Vu Thi Thao Giang" src="./assets/images/my-avatar.jpg" />
+                        <p class="introduction__name">Vu Thi Thao Giang</p>
+                        <h2 class="introduction__quote">Dream Big. Think Different. Do Great!</h2>
+                         <div class="introduction__tags">
+                           
+                            <span class="tag-item">Web Components</span>
+                            <span class="tag-item">Java/PHP</span>
+                            <span class="tag-item">ReatJS</span>
+                            <span class="tag-item">MySQL</span>
+                            <span class="tag-item">UI/UX Animation</span>
+                         </div>
+                         <button>
+                            <a class="introduction__link" href="mailto:vuthithaogiang050400@gmail.com">Get in touch</a>
+                         </button>
+                    </div>
+
+                    <!-- Right -->
+                    <div class="introduction__right">
+                        <div class="introduction__overlay"></div>
+                        <figure class="introduction__thumbs">
+
+                        <div class="introduction__slide">
+                              <img class="introduction__img" alt="" src="./assets/images/intro-thumb-not-color.jpg" />
+                              <img class="introduction__img" alt="" src="./assets/images/intro-thumb.jpg" />
+                              <img class="introduction__img" alt="" src="./assets/images/intro-thumb-not-color.jpg" />
+                             
+                        </div>
+                        </figure>
+                     </div>
+                </div>
+            </div>
+        </main>
     
+        <!-- Footer -->
+        <footer id="footer"></footer>
+        <script>
+            load("#footer", "./template/footer.html");
+        </script>
+        
+   </div>
 </body>
 </html>
