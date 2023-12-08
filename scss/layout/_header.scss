@@ -1,6 +1,9 @@
 .header{
-    background-color: #fff;
+    //background-color: #fff;
    --nav-height: 100px;
+  
+   background-color: var(--bg-color);
+ 
 }
 
 .top-bar{
@@ -25,26 +28,34 @@
 
    &__btn{
      height: 44px;
-     background-color: #f4f5fb;
+     background-color: var(--button-switch-theme-color);
      border-radius: 99px;
      cursor: pointer;
      display: flex;
+    
      align-items: center;
      justify-content: center;
 
    }
 
-  
+   &__btn.not-bg{
+    background-color: transparent;
+    text-decoration: underline;
+   }
+     
+   
+
 
    &__icon{
-     width: 22px;
+     width: 16px;
      cursor: pointer;
+     margin-right: 16px;
    }
 
    &__title{
     font-weight: 600;
     font-size: 1.5rem;
-    padding: 0 24px;
-    color: #333;
+    padding: 0 16px;
+    color: var(--text-color);
    }
 }

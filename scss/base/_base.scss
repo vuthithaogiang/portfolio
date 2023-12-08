@@ -10,4 +10,11 @@ html{
 body{
   font-size: 1.6rem;
   font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+}
+
+.icon{
+  filter: var(--icon-filter-color);
 }

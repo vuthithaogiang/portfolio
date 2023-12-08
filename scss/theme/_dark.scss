@@ -1,0 +1,16 @@
+html.dark{
+    --text-color: #fff;
+    --icon-filter-color: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(599%) hue-rotate(285deg) brightness(114%) contrast(100%);
+
+    --bg-color: #333;
+    --button-bg-color: #1a1919;
+    
+
+    --bg-overlay-intro-thumb: linear-gradient(142deg, rgb(127 127 127 / 58%) 1.8%, rgb(147 137 137 / 66%) 99.75%);
+    --tag-item-text-color: #b4b3c6;
+
+    --nav-profile-active-bg-color: #44454a;
+    --separate-bg-color: #4e4e60;
+
+    --button-switch-theme-color: #1a1919;
+}
