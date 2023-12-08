@@ -228,3 +228,31 @@ window.addEventListener("template-loaded", () => {
 
 const isDark = localStorage.dark === "true";
 document.querySelector("html").classList.toggle("dark", isDark);
+
+
+window.addEventListener("template-loaded", () => {
+    // GO TO TOP
+var goToTopBtn = document.getElementById("back-to-top-btn");
+
+// Show or hide the button based on the scroll position
+window.onscroll = function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    goToTopBtn.style.display = "block";
+  } else {
+    goToTopBtn.style.display = "none";
+  }
+};
+
+});
+
+
+// Scroll to the top when the button is clicked
+function goToTop() {
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+//  document.body.scrollTop = 0; // For Safari
+  //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+}

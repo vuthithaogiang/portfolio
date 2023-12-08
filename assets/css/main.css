@@ -8,6 +8,8 @@ html.dark {
   --nav-profile-active-bg-color: #44454a;
   --separate-bg-color: #4e4e60;
   --button-switch-theme-color: #1a1919;
+  --back-to-top-bg-color: #454b56;
+  --back-to-top-bg-hover-color: #bdbdbd;
 }
 
 :root {
@@ -20,6 +22,8 @@ html.dark {
   --nav-profile-active-bg-color: #f4f5fb;
   --separate-bg-color: #e7e7e9;
   --button-switch-theme-color: #f4f5fb;
+  --back-to-top-bg-color: #bdbdbd;
+  --back-to-top-bg-hover-color: #454b56;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -1264,7 +1268,7 @@ body {
 }
 
 .footer {
-  margin-top: 300px;
+  margin-top: 800px;
 }
 
 .introduction {
@@ -1402,6 +1406,32 @@ body {
   height: 1px;
   background-color: var(--separate-bg-color);
   margin-top: 24px;
+}
+
+.back-to-top__btn {
+  position: fixed;
+  bottom: 50px;
+  right: 40px;
+  display: none;
+  width: 49px;
+  height: 49px;
+  background-color: var(--back-to-top-bg-color);
+  box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.back-to-top__btn img {
+  margin: auto;
+  display: block;
+  width: 16px;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(10%) saturate(1599%) hue-rotate(170deg) brightness(122%) contrast(95%);
+}
+.back-to-top__btn.visible {
+  display: block;
+  transition: background-color 0.5s;
+}
+.back-to-top__btn.visible:hover {
+  background-color: var(--back-to-top-bg-hover-color);
 }
 
 /*# sourceMappingURL=main.css.map */
