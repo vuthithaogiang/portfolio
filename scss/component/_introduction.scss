@@ -119,8 +119,8 @@
 
     &__overlay{
         position: absolute;
+        z-index: -1;
         inset: 10px 10px 10px 10px;
-        width: 97%;
         border-radius: 30px;
         background: linear-gradient(71deg, #3e1a2a 22.92%, #3f3620 62.85%, #252d13 96.68%);
         
