@@ -11,6 +11,8 @@ html.dark {
   --back-to-top-bg-color: #454b56;
   --back-to-top-bg-hover-color: #bdbdbd;
   --alter-for--work-bg-color: #c4b5e0;
+  --nav-bar-mobile-bg-color: #1d1d1d;
+  --nav-bar-mobile-item-active-bg-color: #323232;
 }
 
 :root {
@@ -26,6 +28,8 @@ html.dark {
   --back-to-top-bg-color: #bdbdbd;
   --back-to-top-bg-hover-color: #454b56;
   --alter-for--work-bg-color: #fff;
+  --nav-bar-mobile-bg-color: #fff;
+  --nav-bar-mobile-item-active-bg-color: #f4f5fb;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -1339,8 +1343,42 @@ body {
 }
 @media (max-width: 991.98px) {
   .top-bar__actions {
-    display: none;
+    padding: 20px;
+    position: fixed;
+    inset: 0 50% 0 0;
+    background-color: var(--nav-bar-mobile-bg-color);
+    display: initial;
+    z-index: 10;
+    max-height: 100vh;
+    overflow-y: scroll;
   }
+}
+@media (max-width: 767.98px) {
+  .top-bar__actions {
+    inset: 0 30% 0 0;
+  }
+}
+.top-bar__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity, visibility;
+  transition-duration: 0.4s;
+}
+@media (max-width: 991.98px) {
+  .top-bar__overlay {
+    visibility: visible;
+    opacity: 1;
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(85, 85, 85, 0.5019607843);
+    z-index: 5;
+  }
+}
+.top-bar__btn-back {
+  margin-bottom: 16px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
 }
 .top-bar__btn {
   height: 44px;
@@ -1351,14 +1389,56 @@ body {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 991.98px) {
+  .top-bar__btn {
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+  .top-bar__btn:hover {
+    background-color: var(--nav-bar-mobile-item-active-bg-color);
+  }
+  .top-bar__btn:hover::before {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    content: "";
+    height: 70%;
+    width: 2px;
+    background-color: #6aa5dc;
+    border-radius: 20px;
+    transform: translateY(-50%);
+  }
+}
+@media (max-width: 991.98px) {
+  .top-bar__btn + .top-bar__btn {
+    margin-top: 16px;
+  }
+}
 .top-bar__btn.not-bg {
   background-color: transparent;
   text-decoration: underline;
+}
+@media (max-width: 991.98px) {
+  .top-bar__btn.not-bg {
+    text-decoration: none;
+    background-color: transparent;
+  }
+  .top-bar__btn.not-bg:hover {
+    background-color: var(--nav-bar-mobile-item-active-bg-color);
+  }
 }
 .top-bar__icon {
   width: 16px;
   cursor: pointer;
   margin-right: 16px;
+}
+@media (max-width: 991.98px) {
+  .top-bar__icon {
+    margin-left: 8px;
+  }
 }
 .top-bar__title {
   font-weight: 600;

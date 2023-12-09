@@ -29,8 +29,8 @@
       display: flex;
       align-items: center;
       gap: 24px;
+
     }
-   
    }
 
    &__actions{
@@ -39,10 +39,51 @@
     gap: 16px;
 
     @include abstracts.breakpoint(lg) {
-      display: none;
+       padding: 20px;
+        position: fixed;
+        inset: 0  50% 0 0;
+        background-color: var(--nav-bar-mobile-bg-color);
+        display: initial;
+        z-index: 10;
+
+        max-height: 100vh;
+        overflow-y: scroll;
+        
+
+        
      } 
+
+     @include abstracts.breakpoint(md) {
+        inset: 0 30% 0 0;
+     }
    
    }
+
+   &__overlay{
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity, visibility;
+    transition-duration: 0.4s;
+
+    @include abstracts.breakpoint(lg) {
+      visibility: visible;
+      opacity: 1;
+      position: fixed;
+      inset: 0 0 0 0;
+      background-color: #55555580;
+      z-index: 5;
+    }
+
+   } 
+
+   &__btn-back{
+    margin-bottom: 16px;
+    width: 32px;
+    height: 32px;
+  //  background-color: red;
+    cursor: pointer;
+  }
 
    &__btn{
      height: 44px;
@@ -54,20 +95,67 @@
      align-items: center;
      justify-content: center;
 
+     @include abstracts.breakpoint(lg) {
+        position: relative;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        border-radius: 10px;
+        background-color: transparent;
+
+       
+
+        &:hover{
+          background-color: var(--nav-bar-mobile-item-active-bg-color);
+          &::before{
+            position: absolute;
+            top: 50%;
+            left: -10px;
+            content: "";
+            height: 70%;
+            width: 2px;
+            background-color: #6aa5dc;
+            border-radius: 20px;
+            transform: translateY(-50%);
+           
+          }
+         
+        }
+
+
+     }
+
+   }
+
+   &__btn + &__btn {
+    @include abstracts.breakpoint(lg) {
+       margin-top: 16px;
+    }
    }
 
    &__btn.not-bg{
     background-color: transparent;
     text-decoration: underline;
+
+    @include abstracts.breakpoint(lg) {
+      text-decoration: none;
+      background-color: transparent;
+      
+
+      &:hover{
+        background-color: var(--nav-bar-mobile-item-active-bg-color);
+      }
+    }
    }
      
-   
-
 
    &__icon{
      width: 16px;
      cursor: pointer;
      margin-right: 16px;
+
+     @include abstracts.breakpoint(lg){
+      margin-left: 8px;
+     }
    }
 
    &__title{
@@ -75,5 +163,7 @@
     font-size: 1.5rem;
     padding: 0 16px;
     color: var(--text-color);
+
+    
    }
 }
