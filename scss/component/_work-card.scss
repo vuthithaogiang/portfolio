@@ -7,6 +7,7 @@
     background-color: #f2f2f4;
     position: relative;
     overflow: hidden;
+    
 
     &:hover   &__overlay {
             visibility: visible;
@@ -54,19 +55,24 @@
 
     &__inner{
         width: 100%;
+       
         position: relative;
 
     }
 
     &__img-wrap{
        width: 100%;
+      
+       
 
     }
 
-    &__thumb{
-       
+    &__thumb{ 
+       display: block;
         width: 100%;
+        height: 300px;
         object-fit: cover;
+     
         border-radius: 6px;
 
     }

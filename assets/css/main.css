@@ -1847,7 +1847,9 @@ body {
   width: 100%;
 }
 .work-card__thumb {
+  display: block;
   width: 100%;
+  height: 300px;
   object-fit: cover;
   border-radius: 6px;
 }
