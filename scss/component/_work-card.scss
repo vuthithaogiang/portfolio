@@ -1,0 +1,121 @@
+.work-card{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f4;
+    position: relative;
+    overflow: hidden;
+
+    &:hover   &__overlay {
+            visibility: visible;
+            opacity: 1;
+    
+     }
+
+     &:hover &__info{
+        visibility: visible;
+        opacity: 1;
+     }
+    
+    &__overlay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2b2929a3; 
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility, opacity, background-color;
+        transition-duration: 0.4s;
+    }
+
+    &.bg-light{
+        background-color: #ecf2f3;
+
+    }
+
+    &.bg-dark{
+        background-color: #4c525c;
+     //  background-image: url(https://media.istockphoto.com/id/851414042/photo/defocused-blurred-motion-abstract-background-purple-red.jpg?b=1&s=612x612&w=0&k=20&c=aG5U87M3CsivCBY8F3gUizDdEfCoQNbFP2U25aLLlDM=);
+
+    }
+
+    &.bg-colorful-light{
+        background-image: url(https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&w=600);
+
+    }
+
+    &.bg-colorful-dark{
+        background-image: url(https://images.pexels.com/photos/6984984/pexels-photo-6984984.jpeg?auto=compress&cs=tinysrgb&w=600);
+    }
+
+    &__inner{
+        width: 100%;
+        position: relative;
+
+    }
+
+    &__img-wrap{
+       width: 100%;
+
+    }
+
+    &__thumb{
+       
+        width: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+
+    }
+
+    // ABSOLUTE
+    &__info{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1;
+        padding: 0 12px 12px 12px;
+
+        visibility: hidden;
+        opacity: 0;
+
+        transition: visibility, opacity;
+        transition-duration: 0.4s;
+
+    }
+
+    &__tittle{
+        color: #fff;
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: keep-all;
+
+    }
+
+    &__link{
+        display: block;
+        background-color: #fff;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+
+        img{
+            width: 13px;
+        }
+
+    }
+
+}

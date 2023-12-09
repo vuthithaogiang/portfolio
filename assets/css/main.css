@@ -1641,6 +1641,7 @@ body {
 }
 .profile-subnav {
   margin-top: 40px;
+  position: sticky;
 }
 .profile-subnav__list {
   display: flex;
@@ -1653,7 +1654,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
-.profile-subnav__item.active {
+.profile-subnav__item--current {
   background-color: var(--nav-profile-active-bg-color);
 }
 .profile-subnav__link {
@@ -1675,6 +1676,15 @@ body {
   .profile-subnav__separate {
     margin-top: 12px;
   }
+}
+.profile-subnav__contents {
+  padding-top: 30px;
+}
+.profile-subnav__content {
+  display: none;
+}
+.profile-subnav__content--current {
+  display: block;
 }
 
 .back-to-top__btn {
@@ -1784,6 +1794,97 @@ body {
   cursor: pointer;
   padding: 12px 18px;
   border-radius: 99px;
+}
+
+.work-card {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f2f2f4;
+  position: relative;
+  overflow: hidden;
+}
+.work-card:hover .work-card__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+.work-card:hover .work-card__info {
+  visibility: visible;
+  opacity: 1;
+}
+.work-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 41, 41, 0.6392156863);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility, opacity, background-color;
+  transition-duration: 0.4s;
+}
+.work-card.bg-light {
+  background-color: #ecf2f3;
+}
+.work-card.bg-dark {
+  background-color: #4c525c;
+}
+.work-card.bg-colorful-light {
+  background-image: url(https://images.pexels.com/photos/6775241/pexels-photo-6775241.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.work-card.bg-colorful-dark {
+  background-image: url(https://images.pexels.com/photos/6984984/pexels-photo-6984984.jpeg?auto=compress&cs=tinysrgb&w=600);
+}
+.work-card__inner {
+  width: 100%;
+  position: relative;
+}
+.work-card__img-wrap {
+  width: 100%;
+}
+.work-card__thumb {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.work-card__info {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 0 12px 12px 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility, opacity;
+  transition-duration: 0.4s;
+}
+.work-card__tittle {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: keep-all;
+}
+.work-card__link {
+  display: block;
+  background-color: #fff;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.work-card__link img {
+  width: 13px;
 }
 
 /*# sourceMappingURL=main.css.map */

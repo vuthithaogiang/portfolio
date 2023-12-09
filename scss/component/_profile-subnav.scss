@@ -2,6 +2,7 @@
 
 .profile-subnav{
     margin-top: 40px;
+    position: sticky;
 
     &__list{
         display: flex;
@@ -16,7 +17,7 @@
         border-radius: 10px;
         cursor: pointer;
 
-        &.active{
+        &--current{
             background-color: var(--nav-profile-active-bg-color);
 
           
@@ -45,6 +46,18 @@
 
         @include abstracts.breakpoint(lg) {
             margin-top: 12px;
+        }
+    }
+
+    &__contents{
+        padding-top: 30px;
+    }
+
+    &__content{
+        display: none;
+
+        &--current{
+            display: block;
         }
     }
 }
