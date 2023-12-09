@@ -62,9 +62,12 @@
         background-color: var(--nav-bar-mobile-bg-color);
         display: initial;
         z-index: 10;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
 
         max-height: 100vh;
         overflow-y: scroll;
+        overscroll-behavior: contain;
         
         transform: translate(-100%, 0);
 

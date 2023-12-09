@@ -130,11 +130,15 @@ button, a[href]{
     text-decoration: none;
     font-family: inherit;
     border: none;
-  
     color: inherit;
 }
 
 button{
+    outline: none;
     background-color: transparent;
 
+}
+
+a, button, select, textarea, li, span{
+    -webkit-tap-highlight-color: transparent;
 }
