@@ -1,8 +1,17 @@
+@use '../abstracts';
+
 .alter-for-work{
     position: fixed;
     bottom: 50px;
     left:  80px;
     display: none;
+
+    @include abstracts.breakpoint(lg) {
+        width: fit-content;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     
 
     background-color: var(--alter-for--work-bg-color);

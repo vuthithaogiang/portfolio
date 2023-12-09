@@ -1,3 +1,5 @@
+@use '../abstracts';
+
 .profile-subnav{
     margin-top: 40px;
 
@@ -40,5 +42,9 @@
         height: 1px;
         background-color: var(--separate-bg-color);
         margin-top: 24px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 12px;
+        }
     }
 }
