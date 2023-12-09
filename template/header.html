@@ -1,12 +1,12 @@
 <div class="top-bar">
     <!-- User name -->
     <div class="top-bar__username">
-        <button><img class="icon d-none d-lg-block" alt="" src="./assets/icons/menu-mobile.svg" /></button>
+        <button class="js-toggle" toggle-target="#navbar-mobile"><img class="icon d-none d-lg-block" alt="" src="./assets/icons/menu-mobile.svg" /></button>
         <h2>Vu Thi Thao Giang</h2>
     </div>
 
-    <div class="top-bar__actions">
-           <button class=" top-bar__btn-back">
+    <div id="navbar-mobile" class="top-bar__actions hide">
+           <button class=" top-bar__btn-back js-toggle" toggle-target="#navbar-mobile">
              <img class="icon d-none d-lg-block" alt="" src="./assets/icons/arrow-left.svg"  />
            </button>    
 
@@ -20,6 +20,6 @@
             </a>
         </span>
     </div>
-    <div class="top-bar__overlay"></div>
+    <div class="top-bar__overlay js-toggle" toggle-target="#navbar-mobile"></div>
     
 </div>
