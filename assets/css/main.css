@@ -1471,7 +1471,8 @@ body {
 }
 
 .footer {
-  margin-top: 800px;
+  margin-top: 40px;
+  padding-bottom: 60px;
 }
 
 .introduction {
@@ -1830,6 +1831,9 @@ body {
 .work-card.bg-light {
   background-color: #ecf2f3;
 }
+.work-card.bg-beig {
+  background-color: #ece6de;
+}
 .work-card.bg-dark {
   background-color: #4c525c;
 }
@@ -1871,8 +1875,8 @@ body {
 }
 .work-card__tittle {
   color: #fff;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: 44px;
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -1894,6 +1898,9 @@ body {
 }
 .work-card__link img {
   width: 14px;
+}
+.work-card .object-fit-contain {
+  object-fit: contain !important;
 }
 
 /*# sourceMappingURL=main.css.map */
