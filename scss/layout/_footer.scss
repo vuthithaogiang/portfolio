@@ -10,8 +10,8 @@
 
     &__separate{
         flex: 1;
-        height: 2px;
-        background-color: #f6f6f6;
+        height: 1px;
+        background-color: var( --footer-separate-bg-color);
     }
 
     &__image{
@@ -41,7 +41,7 @@
         font-weight: 400;
         letter-spacing: 0.5px;
         color: #8a8484;
-        margin-bottom: 8px;
+        margin-bottom: 14px;
 
     }
 

@@ -1,8 +1,16 @@
 @use '../abstracts';
 
 .profile-subnav{
-    margin-top: 40px;
-    position: sticky;
+    margin-top: 20px;
+   
+
+    &__menu{
+        padding-top: 20px;
+        position: sticky;
+        background-color: var(--bg-color);
+        top: 0;
+        z-index: 1;
+    }
 
     &__list{
         display: flex;
