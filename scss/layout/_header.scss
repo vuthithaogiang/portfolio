@@ -21,16 +21,25 @@
    &__username{
 
     h2{
+      display: flex;
+      align-items: center;
+      gap: 16px;
       font-size: 2.2rem;
-    letter-spacing: 0.2px;
-    font-weight: 700;
+      letter-spacing: 0.2px;
+      font-weight: 700;
+
+      img{
+        height: 22px;
+       filter: var(--logo-filter);
+       
+      }
     }
     
 
     @include abstracts.breakpoint(lg) {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 16px;
 
     }
    }
@@ -50,6 +59,10 @@
     }
 
    } 
+
+  &__see-more{
+   filter: var(--logo-filter);
+  }
 
 
    &__actions{

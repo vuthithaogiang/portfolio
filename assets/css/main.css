@@ -22,6 +22,8 @@ html.dark {
   --about-me-location-bg-clor: #393838;
   --about-me-tag-hover-text-color: #333;
   --about-me-tag-hover-bg-color: #fff;
+  --slider-border-color: #6f6464;
+  --logo-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(101%);
 }
 
 :root {
@@ -48,6 +50,8 @@ html.dark {
   --about-me-location-bg-clor: #f9f9f9;
   --about-me-tag-hover-text-color: #fff;
   --about-me-tag-hover-bg-color: #000;
+  --slider-border-color: #dcd5d5;
+  --logo-filter: brightness(0) saturate(100%) invert(0%) sepia(95%) saturate(0%) hue-rotate(135deg) brightness(104%) contrast(105%);
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -1353,15 +1357,22 @@ body {
   justify-content: space-between;
 }
 .top-bar__username h2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-size: 2.2rem;
   letter-spacing: 0.2px;
   font-weight: 700;
+}
+.top-bar__username h2 img {
+  height: 22px;
+  filter: var(--logo-filter);
 }
 @media (max-width: 991.98px) {
   .top-bar__username {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
   }
 }
 .top-bar__overlay {
@@ -1377,6 +1388,9 @@ body {
     transition: opacity, visibility;
     transition-duration: 0.4s;
   }
+}
+.top-bar__see-more {
+  filter: var(--logo-filter);
 }
 .top-bar__actions {
   display: flex;
@@ -1586,7 +1600,7 @@ body {
 }
 @media (max-width: 991.98px) {
   .introduction__name {
-    display: none;
+    font-size: 1.9rem;
   }
 }
 .introduction__quote {
@@ -1791,7 +1805,7 @@ body {
 
 .alter-for-work {
   position: fixed;
-  z-index: 3;
+  z-index: 13;
   bottom: 50px;
   left: 80px;
   display: none;
@@ -2047,7 +2061,7 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.4;
-  color: #585656 !important;
+  color: var(--about-me-text-link-color) !important;
 }
 .about-me__link {
   font-size: 1.6rem;
@@ -2326,12 +2340,13 @@ body {
 }
 .slider .thumbnail {
   width: 60px;
-  height: auto;
+  height: 45px;
+  object-fit: cover;
   cursor: pointer;
   margin: 0 5px;
   border-radius: 4px;
   background-color: #ECE6DE;
-  border: 2px solid #dcd5d5;
+  border: 2px solid var(--slider-border-color);
 }
 .slider .thumbnail.active {
   border: 2px solid #6aa5dc;
