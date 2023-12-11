@@ -254,11 +254,13 @@ window.addEventListener("template-loaded", () => {
    // Show or hide the button based on the scroll position
    window.onscroll = function() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        goToTopBtn.style.display = "block";
      alterforwork.style.display = "block";
-      goToTopBtn.style.display = "block";
+      
     } else {
-        alterforwork.style.display = "none";
         goToTopBtn.style.display = "none";
+        alterforwork.style.display = "none";
+       
     }
 
     btnHide.onclick = () => {
