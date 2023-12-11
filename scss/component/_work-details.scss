@@ -54,10 +54,10 @@
     }
     &__link{
         flex-shrink: 0;
-        background-color: #333;
+        background-color: var( --about-me-tag-hover-bg-color);
         font-size: 1.4rem;
-        font-weight: 400;
-        color: #fff !important;
+        font-weight: 500;
+        color: var( --about-me-tag-hover-text-color) !important;
         cursor: pointer;
         padding: 12px 18px;
         border-radius: 8px;;
@@ -92,6 +92,7 @@
         object-fit: contain;
         display: block;
         border-radius: 8px;
+        margin: 0 auto;
     }
 
     &__img + &__img {
