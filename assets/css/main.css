@@ -2260,11 +2260,26 @@ body {
   }
 }
 
+.slider {
+  /* Hide the scrollbar for webkit browsers (Chrome, Safari) on mobile devices */
+}
 .slider__container {
   position: relative;
   width: 80%;
   margin: 0 auto;
   overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .slider__container {
+    width: 100%;
+    overflow: auto; /* Use 'auto' instead of 'hidden' */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+  }
+}
+@media only screen and (max-width: 769px) {
+  .slider__container::-webkit-scrollbar {
+    display: none;
+  }
 }
 .slider__wrap {
   display: flex;
@@ -2280,38 +2295,46 @@ body {
 }
 .slider__img {
   width: 70%;
+  user-select: none;
   object-fit: cover;
   border-radius: 8px;
+  background-color: #ECE6DE;
 }
-.slider #prev, .slider #next {
+@media (max-width: 991.98px) {
+  .slider__img {
+    width: 90%;
+  }
+}
+.slider__btn {
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 24px;
-  color: white;
-  background-color: #333;
-  border: none;
-  padding: 10px;
-}
-.slider #prev {
-  left: 0;
-}
-.slider #next {
-  right: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: var(--bg-color);
 }
 .slider #thumbnail-container {
   margin-top: 40px;
   text-align: center;
 }
 .slider .thumbnail {
-  width: 50px;
+  width: 60px;
   height: auto;
   cursor: pointer;
   margin: 0 5px;
+  border-radius: 4px;
+  background-color: #ECE6DE;
 }
 .slider .thumbnail.active {
-  border: 1px solid red;
+  outline: 2px solid #6aa5dc;
+  -moz-outline-radius: 4px;
 }
 
 /*# sourceMappingURL=main.css.map */

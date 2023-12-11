@@ -1,3 +1,6 @@
+@use '../abstracts';
+
+
 .slider{
 
     &__container {
@@ -5,59 +8,96 @@
         width: 80%;
         margin: 0 auto;
         overflow: hidden;
-      }
+
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            overflow: auto; /* Use 'auto' instead of 'hidden' */
+            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+        
+
+        }
+    }
+
+    /* Hide the scrollbar for webkit browsers (Chrome, Safari) on mobile devices */
+   @media only screen and (max-width: 769px) {
+    &__container::-webkit-scrollbar {
+      display: none;
+    }
+  }
+    
   
-      &__wrap {
+     &__wrap {
         display: flex;
         align-items: center;
         transition: transform 0.5s ease-in-out;
-      }
+    }
+
   
-      &__wrapimage {
+     &__wrapimage {
         min-width: 100%;
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
        // box-sizing: border-box;
-      }
+       
+    }
   
-      &__img {
+    &__img {
         width: 70%;
       //  height: auto;
+       user-select: none;
         object-fit: cover;
         border-radius: 8px;
-      }
-  
-      #prev, #next {
+        background-color: #ECE6DE;
+        @include abstracts.breakpoint(lg) {
+            width: 90%;
+        }
+    }
+   
+
+     &__btn{
         cursor: pointer;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 24px;
-        color: white;
-        background-color: #333;
-        border: none;
-        padding: 10px;
-      }
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        background-color: var(--bg-color);
+
+
+       
+    }
+
+     
   
-      #prev { left: 0; }
-      #next { right: 0; }
-  
-      #thumbnail-container {
+     #thumbnail-container {
         margin-top: 40px;
         text-align: center;
-      }
+    }
   
-      .thumbnail {
-        width: 50px;
+     .thumbnail {
+        width: 60px;
         height: auto;
         cursor: pointer;
         margin: 0 5px;
-      }
+        border-radius: 4px;
+        background-color: #ECE6DE;
+    }
 
-      .thumbnail.active{
-        border: 1px solid red;
+    .thumbnail.active{
+        outline: 2px solid #6aa5dc;
+        -moz-outline-radius: 4px;
+        
+      
       }
+    //   border: 2px solid #dcd5d5;
+      
 
 }
