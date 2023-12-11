@@ -113,6 +113,8 @@
         @include abstracts.breakpoint(lg) {
             max-width: 90%;
             margin: 20px auto;
+            font-size: 1.6rem;
+            font-weight: 500;
         }
        
     }
