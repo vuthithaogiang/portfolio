@@ -2331,10 +2331,10 @@ body {
   margin: 0 5px;
   border-radius: 4px;
   background-color: #ECE6DE;
+  border: 2px solid #dcd5d5;
 }
 .slider .thumbnail.active {
-  outline: 2px solid #6aa5dc;
-  -moz-outline-radius: 4px;
+  border: 2px solid #6aa5dc;
 }
 
 /*# sourceMappingURL=main.css.map */
