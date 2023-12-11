@@ -17,6 +17,10 @@
         top: 0;
         z-index: 10;
         background-color: var(--bg-color);
+
+        @include abstracts.breakpoint(lg) {
+            margin-bottom: 10px;
+        }
         
     }
     &__header-inner{
@@ -43,6 +47,10 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         word-break: break-all;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.8rem;
+        }
     }
     &__link{
         flex-shrink: 0;
@@ -72,7 +80,7 @@
         gap: 8px;
 
         &--tag{
-            color: green;
+            color: #4daa57;
             font-weight: 500;
             font-size: 1.4rem;
             line-height: 1.4;
@@ -88,6 +96,10 @@
 
     &__img + &__img {
         margin-top: 40px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 24px;
+        }
     }
 
     &__desc{
@@ -99,6 +111,7 @@
 
         @include abstracts.breakpoint(lg) {
             max-width: 90%;
+            margin: 20px auto;
         }
        
     }
