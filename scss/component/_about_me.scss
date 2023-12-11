@@ -1,0 +1,135 @@
+@use '../abstracts';
+
+
+.about-me{
+
+    &__inner{
+
+
+    }
+
+    &__center{
+        margin: 0 auto;
+        
+        @include abstracts.breakpoint(lg) {
+           margin: 0;
+           flex: 1;
+        }
+    }
+
+    &__column-mobile{
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+        }
+    }
+ 
+
+    &__left{
+
+        @include abstracts.breakpoint(lg){
+            width: 100%;
+        }
+
+    }
+
+    &__biograpy{
+
+    }
+    &__skills{
+        margin-top: 32px;
+
+    }
+    &__location{
+        background-color: var( --about-me-location-bg-clor);
+        padding: 16px;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 24px;
+            border-radius: 8px;
+        }
+    }
+    &__socials{
+        margin-top: 32px;
+
+    }
+
+    &__right{
+
+        @include abstracts.breakpoint(lg){
+            width: 100%;
+        }
+
+    }
+    &__row{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        img{
+            width: 20px;
+            filter: var(  --about-me-icon-color);
+        }
+    }
+
+    &__row + &__row{
+        margin-top: 16px;
+
+        @include abstracts.breakpoint(lg){
+            margin-top: 24px;
+        }
+    }
+
+    &__title{
+        margin-bottom: 16px;
+        font-size: 1.7rem;
+        font-weight: 500 ;
+        line-height: 1.4;
+
+    }
+
+    &__desc{
+        padding: 8px 0 ;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #585656 !important;
+
+
+    }
+
+    &__link{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.4;
+        color: var(--about-me-text-link-color) !important;
+
+        &.small{
+            font-size: 1.5rem;
+        }
+    }
+
+    &__tags{
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+
+    }
+
+    &__tag{
+        background-color: var(--about-me-bg-tag-color) ;
+        padding: 7px 10px 8px 10px;
+        border-radius: 4px;
+        font-size: 1.4rem;
+        
+        color: var(--text-color);
+        transition: background-color color;
+        transition-duration: 0.3s;
+
+        &:hover{
+            background-color: var( --about-me-tag-hover-bg-color);
+            color: var(--about-me-tag-hover-text-color);
+        }
+        
+
+    }
+}
