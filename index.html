@@ -1,602 +1,874 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Vu Thi Thao Giang</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio | Vu Thi Thao Giang</title>
 
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+        <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg">
-    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
 
-<!-- Styles -->
-<link rel="stylesheet" href="./assets/css/main.css">
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
 
-<!-- Scripts -->
-<script src="./assets/js/scripts.js"></script>
-</head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header class="header" id="header"></header>
+            <script>
+                load('#header', './template/header.html');
+            </script>
 
-
-<body>
-   <div class="container">
-        <!-- Header -->
-        <header class="header" id="header"></header>
-        <script>
-            load("#header", "./template/header.html");
-        </script>
-        
-        <!-- Main -->
-        <main>
-            <!-- Introduction -->
-            <div class="introduction">
-                <div class="introduction__inner">
-                    <!-- Left -->
-                    <div class="introduction__left">
-                        <img class="introduction__avatar" alt="Vu Thi Thao Giang" src="./assets/images/my-avatar.jpg" />
-                        <p class="introduction__name">Vu Thi Thao Giang 🌟</p>
-                        <h2 class="introduction__quote">Dream Big. Think Different. <strong>Do Great!</strong></h2>
-                         <div class="introduction__tags">
-                           
-                            <span class="tag-item">Web Components</span>
-                            <span class="tag-item">Java/PHP</span>
-                            <span class="tag-item">ReatJS</span>
-                            <span class="tag-item">MySQL</span>
-                            <span class="tag-item">UI/UX Animation</span>
-                         </div>
-                         <button>
-                            <a class="introduction__link" href="mailto:vuthithaogiang050400@gmail.com">Get in touch</a>
-                         </button>
-                    </div>
-
-                    <!-- Right -->
-                    <div class="introduction__right">
-                        <div class="introduction__overlay"></div>
-                        <figure class="introduction__thumbs">
-
-                        <div class="introduction__slide">
-                              <img class="introduction__img" alt="" src="./assets/images/intro-thumb-not-color.jpg" />
-                              <img class="introduction__img" alt="" src="./assets/images/intro-thumb.jpg" />
-                              <img class="introduction__img" alt="" src="./assets/images/intro-thumb-not-color.jpg" />   
+            <!-- Main -->
+            <main>
+                <!-- Introduction -->
+                <div class="introduction">
+                    <div class="introduction__inner">
+                        <!-- Left -->
+                        <div class="introduction__left">
+                            <img
+                                class="introduction__avatar"
+                                alt="Vu Thi Thao Giang"
+                                src="./assets/images/my-avatar.jpg"
+                            />
+                            <p class="introduction__name">Vu Thi Thao Giang 🌟</p>
+                            <h2 class="introduction__quote">Dream Big. Think Different. <strong>Do Great!</strong></h2>
+                            <div class="introduction__tags">
+                                <span class="tag-item">Web Components</span>
+                                <span class="tag-item">Java/PHP</span>
+                                <span class="tag-item">ReatJS</span>
+                                <span class="tag-item">MySQL</span>
+                                <span class="tag-item">UI/UX Animation</span>
+                            </div>
+                            <button>
+                                <a class="introduction__link" href="mailto:vuthithaogiang050400@gmail.com"
+                                    >Get in touch</a
+                                >
+                            </button>
                         </div>
-                        </figure>
-                     </div>
+
+                        <!-- Right -->
+                        <div class="introduction__right">
+                            <div class="introduction__overlay"></div>
+                            <figure class="introduction__thumbs">
+                                <div class="introduction__slide">
+                                    <img
+                                        class="introduction__img"
+                                        alt=""
+                                        src="./assets/images/intro-thumb-not-color.jpg"
+                                    />
+                                    <img class="introduction__img" alt="" src="./assets/images/intro-thumb.jpg" />
+                                    <img
+                                        class="introduction__img"
+                                        alt=""
+                                        src="./assets/images/intro-thumb-not-color.jpg"
+                                    />
+                                </div>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Subnav Menu -->
-            <div class="profile-subnav">
-               <div class="js-tabs">
-                    <div class="profile-subnav__menu">
-                        <ul class="profile-subnav__list ">
-                            <li class="profile-subnav__item profile-subnav__item--current">
-                                <a class="profile-subnav__link" href="#!">Works</a>
-                            </li>
-                            <li class="profile-subnav__item ">
-                                <a class="profile-subnav__link" href="#!">Projects</a>
-                            </li>
-                            <li class="profile-subnav__item ">
-                                <a class="profile-subnav__link" href="#!">About me</a>
-                            </li>
-                        </ul>
-                        <div class="profile-subnav__separate">
+                <!-- Subnav Menu -->
+                <div class="profile-subnav">
+                    <div class="js-tabs">
+                        <div class="profile-subnav__menu">
+                            <ul class="profile-subnav__list">
+                                <li class="profile-subnav__item profile-subnav__item--current">
+                                    <a class="profile-subnav__link" href="#!">Works</a>
+                                </li>
+                                <li class="profile-subnav__item">
+                                    <a class="profile-subnav__link" href="#!">Projects</a>
+                                </li>
+                                <li class="profile-subnav__item">
+                                    <a class="profile-subnav__link" href="#!">About me</a>
+                                </li>
+                            </ul>
+                            <div class="profile-subnav__separate"></div>
                         </div>
-                    </div>
-                  
 
-                    <!-- Content -->
-                    <div class="profile-subnav__contents">
-                        <!-- Works -->
-                        <div class="profile-subnav__content profile-subnav__content--current">
-                            <div class="row row-cols-3 row-cols-lg-2 row-cols-md-1 g-3">
-                                <!-- Column 1 -->
-                                <div class="col">
-                                    <article class="work-card bg-colorful-dark">
-                                        <div class="work-card__inner">
-                                            <div class="work-card__img-wrap">
-                                                <a class="" href="#!">
-                                                    <img class="work-card__thumb" alt="" src="./assets/images/thumb-healthy-food-end-user.png" />
-                                                </a>
+                        <!-- Content -->
+                        <div class="profile-subnav__contents">
+                            <!-- Works -->
+                            <div class="profile-subnav__content profile-subnav__content--current">
+                                <div class="row row-cols-3 row-cols-lg-2 row-cols-md-1 g-3">
+                                    <!-- Column 1 -->
+                                    <div class="col">
+                                        <article class="work-card bg-colorful-dark">
+                                            <div class="work-card__inner">
+                                                <div class="work-card__img-wrap">
+                                                    <a class="" href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-healthy-food-end-user.png"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="work-card__info">
+                                                    <h3 class="work-card__tittle">
+                                                        Healthy Food - Web Application Products And Filter
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
+                                                        <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="work-card__info">
-                                                <h3 class="work-card__tittle">Healthy Food - Web Application Products And Filter</h3>
-                                                <a href="#!"   class="work-card__link ">
-                                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="work-card__overlay"></div>
-                                    </article>
-                                    
-                                 </div>
+                                            <div class="work-card__overlay"></div>
+                                        </article>
+                                    </div>
 
-                                  <!-- Column 2 -->
-                                  <div class="col">
-                                    <article class="work-card bg-dark">
-                                        <div class="work-card__inner">
-                                            <div class="work-card__img-wrap">
-                                                <a class="" href="#!">
-                                                    <img class="work-card__thumb" alt="" src="./assets/images/thumb-underground-landing-page.png" />
-                                                </a>
+                                    <!-- Column 2 -->
+                                    <div class="col">
+                                        <article class="work-card bg-dark">
+                                            <div class="work-card__inner">
+                                                <div class="work-card__img-wrap">
+                                                    <a class="" href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-underground-landing-page.png"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="work-card__info">
+                                                    <h3 class="work-card__tittle">
+                                                        Underground NFT- Landing Page UI Kit
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
+                                                        <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="work-card__info">
-                                                <h3 class="work-card__tittle">Underground NFT- Landing Page UI Kit</h3>
-                                                <a href="#!"  class="work-card__link">
-                                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                                </a>
+                                            <div class="work-card__overlay"></div>
+                                        </article>
+                                    </div>
+                                    <!-- Column 3 -->
+                                    <div class="col">
+                                        <article class="work-card bg-colorful-light">
+                                            <div class="work-card__inner">
+                                                <div class="work-card__img-wrap">
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-lucy-pet-landing-page.png"
+                                                    /></a>
+                                                </div>
+                                                <div class="work-card__info">
+                                                    <h3 class="work-card__tittle">Lucy Pet - Landing Page UI Kit</h3>
+                                                    <a href="#!" class="work-card__link">
+                                                        <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                                    </a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="work-card__overlay"></div>
-                                    </article>
-                                 </div>
-                                <!-- Column 3 -->
-                                 <div class="col">
-                                    <article class="work-card bg-colorful-light">
-                                        <div class="work-card__inner">
-                                            <div class="work-card__img-wrap">
-                                               
-                                                  <a href="#!">  <img class="work-card__thumb" alt="" src="./assets/images/thumb-lucy-pet-landing-page.png" /></a>
-                                                
-                                            </div>
-                                            <div class="work-card__info">
-                                                <h3 class="work-card__tittle">Lucy Pet - Landing Page UI Kit</h3>
-                                                <a href="#!"  class="work-card__link" >
-                                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="work-card__overlay"></div>
-                                    </article>
-                                   
+                                            <div class="work-card__overlay"></div>
+                                        </article>
+                                    </div>
 
-                                 </div>
+                                    <!-- Column 4 -->
+                                    <div class="col">
+                                        <article class="work-card bg-light">
+                                            <div class="work-card__inner">
+                                                <div class="work-card__img-wrap">
+                                                    <a class="" href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-lesson-education-landing-page.png"
+                                                        />
+                                                    </a>
+                                                </div>
+                                                <div class="work-card__info">
+                                                    <h3 class="work-card__tittle">
+                                                        Lesson Education - Landing Page UI Kit
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
+                                                        <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="work-card__overlay"></div>
+                                        </article>
+                                    </div>
 
-                                  <!-- Column 4 -->
-                                  <div class="col">
-                                    <article class="work-card bg-light">
-                                        <div class="work-card__inner">
-                                            <div class="work-card__img-wrap">
-                                                <a class="" href="#!">
-                                                    <img class="work-card__thumb" alt="" src="./assets/images/thumb-lesson-education-landing-page.png" />
-                                                </a>
+                                    <!-- Column 5 -->
+                                    <div class="col">
+                                        <article class="work-card bg-colorful-light">
+                                            <div class="work-card__inner">
+                                                <div class="work-card__img-wrap">
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb object-fit-contain"
+                                                            alt=""
+                                                            src="./assets/images/thumb-healthy-food-table-admin.png"
+                                                    /></a>
+                                                </div>
+                                                <div class="work-card__info">
+                                                    <h3 class="work-card__tittle">
+                                                        Healthy Food - Web Application For Admin Manages
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
+                                                        <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="work-card__info">
-                                                <h3 class="work-card__tittle">Lesson Education - Landing Page UI Kit</h3>
-                                                <a href="#!" class="work-card__link" >
-                                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="work-card__overlay"></div>
-                                    </article>
-                                    
-                                 </div>
+                                            <div class="work-card__overlay"></div>
+                                        </article>
+                                    </div>
 
-                                  <!-- Column 5 -->
-                                  <div class="col">
-                                    <article class="work-card bg-colorful-light">
-                                        <div class="work-card__inner">
-                                            <div class="work-card__img-wrap">
-                                              
-                                                 <a href="#!">   <img class="work-card__thumb object-fit-contain" alt="" src="./assets/images/thumb-healthy-food-table-admin.png" /></a>
-                                               
+                                    <!-- Column 6 -->
+                                    <div class="col">
+                                        <article class="work-card bg-colorful-dark">
+                                            <div class="work-card__inner">
+                                                <div class="work-card__img-wrap">
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-healthy-food-campaigns.png"
+                                                    /></a>
+                                                </div>
+                                                <div class="work-card__info">
+                                                    <h3 class="work-card__tittle">
+                                                        Healthy Food - Donate Campaingns Web Application
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
+                                                        <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="work-card__info">
-                                                <h3 class="work-card__tittle">Healthy Food - Web Application For Admin Manages</h3>
-                                                <a href="#!"  class="work-card__link" >
-                                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="work-card__overlay"></div>
-                                    </article>
-                                    
-                                 </div>
-
-                                   <!-- Column 6 -->
-                                   <div class="col">
-                                    <article class="work-card bg-colorful-dark">
-                                        <div class="work-card__inner">
-                                            <div class="work-card__img-wrap">
-                                              
-                                                 <a href="#!">   <img class="work-card__thumb" alt="" src="./assets/images/thumb-healthy-food-campaigns.png" /></a>
-                                               
-                                            </div>
-                                            <div class="work-card__info">
-                                                <h3 class="work-card__tittle">Healthy Food - Donate Campaingns Web Application </h3>
-                                                <a href="#!"  class="work-card__link" >
-                                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="work-card__overlay"></div>
-                                    </article>
-                                    
-                                 </div>
+                                            <div class="work-card__overlay"></div>
+                                        </article>
+                                    </div>
 
                                     <!-- Column  7-->
                                     <div class="col">
                                         <article class="work-card bg-dark">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb" alt="" src="./assets/images/thumb-form-sign-up.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-form-sign-up.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
-                                                    <h3 class="work-card__tittle">Web Component - Form Sign Up For Mobile</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <h3 class="work-card__tittle">
+                                                        Web Component - Form Sign Up For Mobile
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                        
-                                     </div>
+                                    </div>
 
-                                       <!-- Column  8-->
+                                    <!-- Column  8-->
                                     <div class="col">
                                         <article class="work-card bg-colorful-dark">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb" alt="" src="./assets/images/thumb-sidebar-navigation-mobile.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-sidebar-navigation-mobile.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
-                                                    <h3 class="work-card__tittle">Sidebar Navigation Mobile For Healthy Food</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <h3 class="work-card__tittle">
+                                                        Sidebar Navigation Mobile For Healthy Food
+                                                    </h3>
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                     </div>
-
+                                    </div>
 
                                     <!-- Column 9 -->
-                                     <div class="col">
+                                    <div class="col">
                                         <article class="work-card bg-light">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb" alt="" src="./assets/images/thumb-pricing-table-for-lucy-pet.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-pricing-table-for-lucy-pet.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">Pricing For Lucy Landing Page</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                     </div>
-                                         <!-- Column  10-->
+                                    </div>
+                                    <!-- Column  10-->
                                     <div class="col">
                                         <article class="work-card bg-colorful-light">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb" alt="" src="./assets/images/thumb-user-profile.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-user-profile.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">User Profile For Healthy Food</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                     </div>
+                                    </div>
                                     <!-- Column 11 -->
                                     <div class="col">
                                         <article class="work-card bg-dark">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb object-fit-contain" alt="" src="./assets/images/thumb-big-dropdown-menu.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb object-fit-contain"
+                                                            alt=""
+                                                            src="./assets/images/thumb-big-dropdown-menu.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">Big Drop Down For Healthy Food</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                     </div>
-                                     <!-- Column 12 -->
-                                     <div class="col">
+                                    </div>
+                                    <!-- Column 12 -->
+                                    <div class="col">
                                         <article class="work-card bg-light">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb object-fit-contain" alt="" src="./assets/images/thumb-form-multi-flter.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb object-fit-contain"
+                                                            alt=""
+                                                            src="./assets/images/thumb-form-multi-flter.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">Multi Filter Form</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                     </div>
+                                    </div>
 
-                                     <!-- Column 13 -->
-                                     <div class="col">
+                                    <!-- Column 13 -->
+                                    <div class="col">
                                         <article class="work-card bg-beig">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb " alt="" src="./assets/images/thumb-sidebar-navigation-file-managemnet.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-sidebar-navigation-file-managemnet.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">
-                                                        <a href="work-details-sidebar-navigation-for-file-management-app.html">Sidebar Navigation for File Management App</a>
+                                                        <a
+                                                            href="work-details-sidebar-navigation-for-file-management-app.html"
+                                                            >Sidebar Navigation for File Management App</a
+                                                        >
                                                     </h3>
-                                                    <a href="work-details-sidebar-navigation-for-file-management-app.html"  class="work-card__link" >
+                                                    <a
+                                                        href="work-details-sidebar-navigation-for-file-management-app.html"
+                                                        class="work-card__link"
+                                                    >
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="work-details-sidebar-navigation-for-file-management-app.html" class="work-card__overlay"></a>
+                                            <a
+                                                href="work-details-sidebar-navigation-for-file-management-app.html"
+                                                class="work-card__overlay"
+                                            ></a>
                                         </article>
-                                     </div>
-                                    
-                                     <!-- Column 14 -->
-                                     <div class="col">
+                                    </div>
+
+                                    <!-- Column 14 -->
+                                    <div class="col">
                                         <article class="work-card bg-colorful-dark">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb " alt="" src="./assets/images/thumb-pricing-table-dark-mode.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-pricing-table-dark-mode.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">Planing Price Table</h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="work-card__overlay"></div>
                                         </article>
-                                     </div>
+                                    </div>
 
-                                     <!-- Column 15 -->
-                                     <div class="col">
+                                    <!-- Column 15 -->
+                                    <div class="col">
                                         <article class="work-card bg-colorful-light">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb object-fit-contain" alt="" src="./assets/images/thumb-card-holder.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb object-fit-contain"
+                                                            alt=""
+                                                            src="./assets/images/thumb-card-holder.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">
                                                         <a href="work-details-card-holder.html">Card Holder</a>
                                                     </h3>
-                                                    <a href="work-details-card-holder.html"  class="work-card__link" >
+                                                    <a href="work-details-card-holder.html" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <a href="work-details-card-holder.html" class="work-card__overlay"></a>
                                         </article>
-                                     </div>
+                                    </div>
 
-                                     <!-- Column 16 -->
-                                     <div class="col">
+                                    <!-- Column 16 -->
+                                    <div class="col">
                                         <article class="work-card bg-light">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb " alt="" src="./assets/images/thumb-daily-icons-part-1.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-daily-icons-part-1.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">
-                                                        <a href="work-details-daily-icons-part1.html">Daily Icons Using In Healthy Food - Part 1</a>
+                                                        <a href="work-details-daily-icons-part1.html"
+                                                            >Daily Icons Using In Healthy Food - Part 1</a
+                                                        >
                                                     </h3>
-                                                    <a href="work-details-daily-icons-part1.html"  class="work-card__link" >
+                                                    <a
+                                                        href="work-details-daily-icons-part1.html"
+                                                        class="work-card__link"
+                                                    >
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="work-details-daily-icons-part1.html" class="work-card__overlay"></a>
+                                            <a
+                                                href="work-details-daily-icons-part1.html"
+                                                class="work-card__overlay"
+                                            ></a>
                                         </article>
-                                     </div>
+                                    </div>
 
-                                      <!-- Column 17 -->
-                                      <div class="col">
+                                    <!-- Column 17 -->
+                                    <div class="col">
                                         <article class="work-card bg-beig">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                  
-                                                     <a href="#!">   <img class="work-card__thumb " alt="" src="./assets/images/thumb-daily-icons-part-2.png" /></a>
-                                                   
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-daily-icons-part-2.png"
+                                                    /></a>
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">
-                                                        <a href="work-details-daily-icons-part2.html">Daily Icons Using In Healthy Food - Part 2</a>
+                                                        <a href="work-details-daily-icons-part2.html"
+                                                            >Daily Icons Using In Healthy Food - Part 2</a
+                                                        >
                                                     </h3>
-                                                    <a href="work-details-daily-icons-part2.html"  class="work-card__link" >
+                                                    <a
+                                                        href="work-details-daily-icons-part2.html"
+                                                        class="work-card__link"
+                                                    >
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
-                                            <a href="work-details-daily-icons-part2.html" class="work-card__overlay"></a>
+                                            <a
+                                                href="work-details-daily-icons-part2.html"
+                                                class="work-card__overlay"
+                                            ></a>
                                         </article>
-                                     </div>
+                                    </div>
 
-                                      <!-- Column 18 -->
-                                      <div class="col">
+                                    <!-- Column 18 -->
+                                    <div class="col">
                                         <article class="work-card bg-grey">
                                             <div class="work-card__inner">
                                                 <div class="work-card__img-wrap">
-                                                     <a href="#!">  
-                                                       <img class="work-card__thumb " alt="" 
-                                                       src="./assets/images/thumb-key-board-3d-not-color.png" />
-
-                                                       
+                                                    <a href="#!">
+                                                        <img
+                                                            class="work-card__thumb"
+                                                            alt=""
+                                                            src="./assets/images/thumb-key-board-3d-not-color.png"
+                                                        />
                                                     </a>
-                                                   
                                                 </div>
                                                 <div class="work-card__info">
                                                     <h3 class="work-card__tittle">
-                                                        <a href="work-details-the-cute-things.html">The Cute Things - 3D Illustration</a>
+                                                        <a href="work-details-the-cute-things.html"
+                                                            >The Cute Things - 3D Illustration</a
+                                                        >
                                                     </h3>
-                                                    <a href="#!"  class="work-card__link" >
+                                                    <a href="#!" class="work-card__link">
                                                         <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
                                                     </a>
                                                 </div>
                                             </div>
                                             <a href="work-details-the-cute-things.html" class="work-card__overlay"></a>
                                         </article>
-                                     </div>
-
-
-
-
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Projects -->
-                        <div class="profile-subnav__content">Content 2</div>
-
-                        <!-- About -->
-                        <div class="profile-subnav__content">
-                            <div class="about-me">
-                                <div class="about-me__inner row " >
-                                   <div class="col-8   about-me__center" >
-                                       <div class="row about-me__columm-mobile">
-                                            <!-- Left -->
-                                            <div class="about-me__left col-8 ">
-                                                <div class="about-me__biography">
-                                                     <h3 class="about-me__title">Biography</h3>
-                                                     <p class="about-me__desc" >
-                                                        🔗 <span class="d-lg-none">Portfolio:</span> <a class="about-me__link" href="https://vuthithaogiang.github.io/portfolio/" target="_blank">https://vuthithaogiang.github.io/portfolio/</a>
-                                                     </p>
-                                                     <p class="about-me__desc">
-                                                        🚀 <span class="d-lg-none">GitHub: </span>
-                                                        <a class="about-me__link" href="https://github.com/vuthithaogiang" target="_blank">
-                                                            https://github.com/vuthithaogiang
-                                                        </a>
-                                                     </p>
-                                                     <p class="about-me__desc">
-                                                        👉 <span class="d-lg-none">Email: </span>
-                                                        <a class="about-me__link"  href="mailto:vuthithaogiang050400@gmail.com">vuthithaogiang050400@gmail.com</a>
-                                                     </p>
+                            <!-- Projects -->
+                            <div class="profile-subnav__content">
+                                <div class="row row-cols-4 row-cols-xl-3 row-cols-lg-2 row-cols-md-1 g-3">
+                                    <!-- Column 1 -->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img alt="" src="./assets/images/thumb-project-underground.png" />
                                                 </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column 2 -->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img alt="" src="./assets/images/thumb-project-lucy-pet (1).png" />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                                <div class="about-me__skills">
-                                                    <h3 class="about-me__title">Skills</h3>
-                                                    <div class="about-me__tags">
-                                                        <span class="about-me__tag">fontend development</span>
-                                                        <span class="about-me__tag">
-                                                            html
-                                                        </span>
-                                                        <span class="about-me__tag">css</span>
-                                                        <span class="about-me__tag">sass</span>
-                                                        <span class="about-me__tag">javascript</span>
-                                                        <span class="about-me__tag">reactjs</span>
-                                                        <span class="about-me__tag">grid-system</span>
-                                                        <span class="about-me__tag">ui</span>
-                                                        <span class="about-me__tag">ux</span>
-                                                        <span class="about-me__tag">web design</span>
-                                                        <span class="about-me__tag">backend development</span>
-                                                        <span class="about-me__tag">laravel php</span>
-                                                        <span class="about-me__tag">spring boot</span>
-                                                        <span class="about-me__tag">resful api</span>
-                                                        <span class="about-me__tag">jwt security</span>
-                                                        <span class="about-me__tag">mysql/mssql</span>
+                                    <!-- Column 3 -->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img
+                                                        alt=""
+                                                        src="./assets/images/thumb-project-lesson-education.png"
+                                                    />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column 7-->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img
+                                                        alt=""
+                                                        src="./assets/images/thumb-project-healthy-food-admin (1).png"
+                                                    />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 4 -->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img alt="" src="./assets/images/thumb-lesson-bensik (1).png" />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 5 -->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img alt="" src="./assets/images/thumb-project-dental-care.png" />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Column 6-->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img
+                                                        alt=""
+                                                        src="./assets/images/thumb-project-healthy-food-end-user.png"
+                                                    />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column 6-->
+                                    <div class="col">
+                                        <div class="project-card">
+                                            <div class="project-card__inner">
+                                                <div class="project-card__thumb">
+                                                    <img
+                                                        alt=""
+                                                        src="./assets/images/thumb-project-healthy-food-admin.png"
+                                                    />
+                                                </div>
+                                                <div class="project-card__sub-thumbs">
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                    <div class="project-card__sub-thumb"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- About -->
+                            <div class="profile-subnav__content">
+                                <div class="about-me">
+                                    <div class="about-me__inner row">
+                                        <div class="col-8 about-me__center">
+                                            <div class="row about-me__columm-mobile">
+                                                <!-- Left -->
+                                                <div class="about-me__left col-8">
+                                                    <div class="about-me__biography">
+                                                        <h3 class="about-me__title">Biography</h3>
+                                                        <p class="about-me__desc">
+                                                            🔗 <span class="d-lg-none">Portfolio:</span>
+                                                            <a
+                                                                class="about-me__link"
+                                                                href="https://vuthithaogiang.github.io/portfolio/"
+                                                                target="_blank"
+                                                                >https://vuthithaogiang.github.io/portfolio/</a
+                                                            >
+                                                        </p>
+                                                        <p class="about-me__desc">
+                                                            🚀 <span class="d-lg-none">GitHub: </span>
+                                                            <a
+                                                                class="about-me__link"
+                                                                href="https://github.com/vuthithaogiang"
+                                                                target="_blank"
+                                                            >
+                                                                https://github.com/vuthithaogiang
+                                                            </a>
+                                                        </p>
+                                                        <p class="about-me__desc">
+                                                            👉 <span class="d-lg-none">Email: </span>
+                                                            <a
+                                                                class="about-me__link"
+                                                                href="mailto:vuthithaogiang050400@gmail.com"
+                                                                >vuthithaogiang050400@gmail.com</a
+                                                            >
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="about-me__skills">
+                                                        <h3 class="about-me__title">Skills</h3>
+                                                        <div class="about-me__tags">
+                                                            <span class="about-me__tag">fontend development</span>
+                                                            <span class="about-me__tag"> html </span>
+                                                            <span class="about-me__tag">css</span>
+                                                            <span class="about-me__tag">sass</span>
+                                                            <span class="about-me__tag">javascript</span>
+                                                            <span class="about-me__tag">reactjs</span>
+                                                            <span class="about-me__tag">grid-system</span>
+                                                            <span class="about-me__tag">ui</span>
+                                                            <span class="about-me__tag">ux</span>
+                                                            <span class="about-me__tag">web design</span>
+                                                            <span class="about-me__tag">backend development</span>
+                                                            <span class="about-me__tag">laravel php</span>
+                                                            <span class="about-me__tag">spring boot</span>
+                                                            <span class="about-me__tag">resful api</span>
+                                                            <span class="about-me__tag">jwt security</span>
+                                                            <span class="about-me__tag">mysql/mssql</span>
+                                                        </div>
                                                     </div>
                                                 </div>
-        
-                                            </div>
-                                            <!-- Right -->
-                                            <div class="about-me__right col-4">
-                                              <div class="about-me__location">
-                                                <div class="about-me__row">
-                                                    <img class="icon" alt="" src="./assets/icons/location.svg" />
-                                                    <p class="about-me__link small">Ha Noi, Viet Nam</p>
-                                                </div>
-                                              </div>
+                                                <!-- Right -->
+                                                <div class="about-me__right col-4">
+                                                    <div class="about-me__location">
+                                                        <div class="about-me__row">
+                                                            <img
+                                                                class="icon"
+                                                                alt=""
+                                                                src="./assets/icons/location.svg"
+                                                            />
+                                                            <p class="about-me__link small">Ha Noi, Viet Nam</p>
+                                                        </div>
+                                                    </div>
 
-                                              <div class="about-me__socials">
-                                                <h3 class="about-me__title">Socials</h3>
-                                                <div class="about-me__row">
-                                                    <img class="icon" alt="" src="./assets/icons/web.svg" />
-                                                    <a class="about-me__link small" href=" https://vuthithaogiang.github.io/portfolio/" target="_blank">
-                                                        https://vuthithaogiang.github.io/portfolio/
-                                                    </a>
-                                                </div>
-                                                <div class="about-me__row">
-                                                    <img class="icon" alt="" src="./assets/icons/github.svg" />
-                                                    <a class="about-me__link small" href="https://github.com/vuthithaogiang" target="_blank">vuthithaogiang</a>
-                                                </div>
-                                                <div class="about-me__row">
-                                                    <img class="icon" alt="" src="./assets/icons/facebook.svg" />
-                                                    <a class="about-me__link small" href="https://www.facebook.com/giang.thao.3720" target="_blank">Facebook</a>
-                                                </div>
-                                                <div class="about-me__row">
-                                                    <img class="icon" alt="" src="./assets/icons/instagram.svg" />
-                                                    <a class="about-me__link small" href="https://www.instagram.com/cheegiang/" target="_blank">Instagram</a>
-                                                </div>
+                                                    <div class="about-me__socials">
+                                                        <h3 class="about-me__title">Socials</h3>
+                                                        <div class="about-me__row">
+                                                            <img class="icon" alt="" src="./assets/icons/web.svg" />
+                                                            <a
+                                                                class="about-me__link small"
+                                                                href=" https://vuthithaogiang.github.io/portfolio/"
+                                                                target="_blank"
+                                                            >
+                                                                https://vuthithaogiang.github.io/portfolio/
+                                                            </a>
+                                                        </div>
+                                                        <div class="about-me__row">
+                                                            <img class="icon" alt="" src="./assets/icons/github.svg" />
+                                                            <a
+                                                                class="about-me__link small"
+                                                                href="https://github.com/vuthithaogiang"
+                                                                target="_blank"
+                                                                >vuthithaogiang</a
+                                                            >
+                                                        </div>
+                                                        <div class="about-me__row">
+                                                            <img
+                                                                class="icon"
+                                                                alt=""
+                                                                src="./assets/icons/facebook.svg"
+                                                            />
+                                                            <a
+                                                                class="about-me__link small"
+                                                                href="https://www.facebook.com/giang.thao.3720"
+                                                                target="_blank"
+                                                                >Facebook</a
+                                                            >
+                                                        </div>
+                                                        <div class="about-me__row">
+                                                            <img
+                                                                class="icon"
+                                                                alt=""
+                                                                src="./assets/icons/instagram.svg"
+                                                            />
+                                                            <a
+                                                                class="about-me__link small"
+                                                                href="https://www.instagram.com/cheegiang/"
+                                                                target="_blank"
+                                                                >Instagram</a
+                                                            >
+                                                        </div>
 
-                                                <div class="about-me__row">
-                                                    <img class="icon" alt="" src="./assets/icons/skype.svg" />
-                                                    <a class="about-me__link small" href="#!" >Skype</a>
+                                                        <div class="about-me__row">
+                                                            <img class="icon" alt="" src="./assets/icons/skype.svg" />
+                                                            <a class="about-me__link small" href="#!">Skype</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                              </div>
                                             </div>
-                                       </div>
-                                   </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-               </div>
-            </div>
+                </div>
+            </main>
 
-            
-        </main>
+            <!-- Back to top Button -->
+            <div class="back-to-top d-lg-none" id="back-to-top"></div>
+            <script>
+                load('#back-to-top', './template/backtotop.html');
+            </script>
 
-        <!-- Back to top Button -->
-        <div class="back-to-top d-lg-none" id="back-to-top"></div>
-        <script>
-            load("#back-to-top", "./template/backtotop.html")
-        </script>
+            <!-- Alert for work -->
+            <div class="alter-for-work" id="alter-for-work"></div>
+            <script>
+                load('#alter-for-work', './template/alter-for-work.html');
+            </script>
 
-        <!-- Alert for work -->
-        <div class="alter-for-work" id="alter-for-work"></div>
-        <script>
-            load("#alter-for-work", "./template/alter-for-work.html")
-        </script>
-    
-        <!-- Footer -->
-        <footer class="footer" id="footer"></footer>
-        <script>
-            load("#footer", "./template/footer.html");
-        </script>
-        
-   </div>
-</body>
+            <!-- Footer -->
+            <footer class="footer" id="footer"></footer>
+            <script>
+                load('#footer', './template/footer.html');
+            </script>
+        </div>
+    </body>
 </html>

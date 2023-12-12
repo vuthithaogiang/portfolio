@@ -2501,4 +2501,35 @@ body {
   }
 }
 
+.project-card__thumb img {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+.project-card__sub-thumbs {
+  margin-top: 4px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.project-card__sub-thumb {
+  flex: 1;
+  height: 70px;
+  background-color: #e9e9ee;
+}
+.project-card__sub-thumb img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+}
+.project-card__sub-thumb:nth-child(1) {
+  border-bottom-left-radius: 6px;
+}
+.project-card__sub-thumb:nth-child(3) {
+  border-bottom-right-radius: 6px;
+}
+
 /*# sourceMappingURL=main.css.map */
