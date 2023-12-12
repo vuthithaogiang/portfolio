@@ -1,158 +1,177 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Vu Thi Thao Giang</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio | Vu Thi Thao Giang</title>
 
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon-portfolio/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-portfolio/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-portfolio/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon-portfolio/site.webmanifest" />
+        <link rel="mask-icon" href="./assets/favicon-portfolio/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon-portfolio/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-portfolio/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-portfolio/favicon-16x16.png">
-<link rel="manifest" href="./assets/favicon-portfolio/site.webmanifest">
-<link rel="mask-icon" href="./assets/favicon-portfolio/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
 
-<!-- Styles -->
-<link rel="stylesheet" href="./assets/css/main.css">
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
 
-<!-- Scripts -->
-<script src="./assets/js/scripts.js"></script>
+    <body>
+        <div class="container">
+            <main class="work-details row">
+                <div class="col-9 work-details__center">
+                    <!-- Header -->
+                    <div class="work-details__header">
+                        <div class="work-details__header-inner">
+                            <div class="work-details__nav">
+                                <a class="work-details__action" href="index.html">
+                                    <img class="icon" alt="" src="./assets/icons/arrow-left.svg" />
+                                </a>
+                                <h2 class="work-details__title">Daily Icon Part 2</h2>
+                            </div>
 
-
-</head>
-
-
-<body>
-   <div class="container ">
-        
-       <main class="work-details row">
-           <div class="col-9 work-details__center">
-                <!-- Header -->
-                <div class="work-details__header">
-                    <div class="work-details__header-inner">
-                       <div class="work-details__nav">
-                            <a class="work-details__action" href="index.html">
-                                <img  class="icon" alt="" src="./assets/icons/arrow-left.svg"/>
-                            </a>
-                            <h2 class="work-details__title">Daily Icon Part 2 </h2>
-                            
-                       </div>
-                       
-                       <a class="work-details__link d-md-none" href="mailto:vuthithaogiang050400@gmail.com">Get in touch</a>
+                            <a class="work-details__link d-md-none" href="mailto:vuthithaogiang050400@gmail.com"
+                                >Get in touch</a
+                            >
+                        </div>
+                        <div class="work-details__notification">
+                            <div class="loader">
+                                <div class="loader__circle">
+                                    <div class="loader__dot"></div>
+                                    <div class="loader__outline"></div>
+                                </div>
+                            </div>
+                            <div class="work-details__notification--tag">Available for work</div>
+                        </div>
                     </div>
-                    <div class="work-details__notification">
-                        <div class="loader">
-                           <div class="loader__circle">
-                               <div class="loader__dot"></div>
-                               <div class="loader__outline"></div>
-                           </div>
-                       </div>
-                       <div class="work-details__notification--tag">Available for work</div>
-    
+
+                    <!-- Content -->
+
+                    <div class="work-details__content">
+                        <div class="slider">
+                            <div id="slider-container" class="slider__container">
+                                <div id="slider" class="slider__wrap">
+                                    <div class="slider__wrapimage">
+                                        <img
+                                            class="slider__img"
+                                            src="./assets/images/thumb-daily-icons-part-2.png"
+                                            alt="Image 1"
+                                        />
+                                    </div>
+                                    <div class="slider__wrapimage">
+                                        <img class="slider__img" src="./assets/images/daily-icons-part2-1.png" alt="" />
+                                    </div>
+                                    <div class="slider__wrapimage">
+                                        <img
+                                            class="slider__img"
+                                            src="./assets/images/daily-icons-part2-3.png"
+                                            alt="Image 3"
+                                        />
+                                    </div>
+                                    <!-- Add more slides as needed -->
+                                </div>
+
+                                <button id="prev" class="slider__btn d-none">
+                                    <img class="icon" alt="" src="./assets/icons/arrow-left.svg" />
+                                </button>
+                                <button id="next" class="slider__btn d-none">
+                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
+                                </button>
+                            </div>
+
+                            <div id="thumbnail-container"></div>
+                            <script>
+                                const thumbnailContainer = document.getElementById('thumbnail-container');
+                                const slides = document.getElementsByClassName('slider__wrapimage');
+
+                                for (let i = 0; i < slides.length; i++) {
+                                    const thumbnail = document.createElement('img');
+                                    thumbnail.src = slides[i].querySelector('img').src;
+                                    thumbnail.alt = 'Thumbnail ' + (i + 1);
+                                    thumbnail.classList.add('thumbnail');
+                                    thumbnail.addEventListener('click', () => showSlide(i));
+                                    thumbnailContainer.appendChild(thumbnail);
+                                    console.log(i);
+                                }
+
+                                // Highlight the first thumbnail initially
+                                thumbnailContainer.children[0].classList.add('active');
+
+                                function showSlide(index) {
+                                    if (index >= slides.length) {
+                                        currentSlide = 0;
+                                    } else if (index < 0) {
+                                        currentSlide = slides.length - 1;
+                                    } else {
+                                        currentSlide = index;
+                                    }
+
+                                    const displacement = -currentSlide * 100 + '%';
+                                    slider.style.transform = 'translateX(' + displacement + ')';
+                                    const thumbnails = document.getElementsByClassName('thumbnail');
+                                    // Highlight the current thumbnail
+                                    for (let i = 0; i < thumbnails.length; i++) {
+                                        thumbnails[i].classList.remove('active');
+                                    }
+                                    thumbnails[currentSlide].classList.add('active');
+                                }
+                            </script>
+                        </div>
                     </div>
                 </div>
-        
-                <!-- Content -->
-                
-                <div class="work-details__content">
-                   <div class="slider">
-                        <div id="slider-container" class="slider__container">
-                            <div id="slider" class="slider__wrap">
-                              <div class="slider__wrapimage">
-                                <img class="slider__img" src="./assets/images/thumb-daily-icons-part-2.png" alt="Image 1">
-                            </div>
-                              <div class="slider__wrapimage">
-                                <img class="slider__img" src="./assets/images/daily-icons-part2-1.png" alt="">
-                            </div>
-                              <div class="slider__wrapimage">
-                                <img class="slider__img" src="./assets/images/daily-icons-part2-3.png" alt="Image 3">
-                            </div>
-                              <!-- Add more slides as needed -->
-                            </div>
-                          
-                            <button  id="prev" class="slider__btn d-none ">
-                                <img class="icon" alt="" src="./assets/icons/arrow-left.svg" />
-                            </button>
-                            <button id="next" class="slider__btn d-none ">
-                                <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                            </button>
-                        </div>
-                          
-                    
-                        <div id="thumbnail-container"></div>
-                        <script>
-                              const thumbnailContainer = document.getElementById("thumbnail-container");
-                              const slides = document.getElementsByClassName("slider__wrapimage");
-                             
+            </main>
 
-                              for (let i = 0; i < slides.length; i++) {
-                                const thumbnail = document.createElement("img");
-                                thumbnail.src = slides[i].querySelector("img").src;
-                                thumbnail.alt = "Thumbnail " + (i + 1);
-                                thumbnail.classList.add("thumbnail");
-                                thumbnail.addEventListener("click", () => showSlide(i));
-                                thumbnailContainer.appendChild(thumbnail);
-                                console.log(i)
-                              }
-     
-                            // Highlight the first thumbnail initially
-                            thumbnailContainer.children[0].classList.add("active");
-                            
-                                                    
-                            function showSlide(index) {
-                                if (index >= slides.length) {
-                                   currentSlide = 0;
-                                } else if (index < 0) {
-                                    currentSlide = slides.length - 1;
-                                } else {
-                                    currentSlide = index;
-                                }
-      
-                                const displacement = -currentSlide * 100 + "%";
-                                slider.style.transform = "translateX(" + displacement + ")";
-                                const thumbnails = document.getElementsByClassName("thumbnail");
-                                // Highlight the current thumbnail
-                                for (let i = 0; i < thumbnails.length; i++) {
-                                    thumbnails[i].classList.remove("active");
-                                }
-                               thumbnails[currentSlide].classList.add("active");
-      
-                            }
-                        </script>
-                   </div>
+            <!-- Back to top Button -->
+            <div class="back-to-top d-lg-none" id="back-to-top"></div>
+            <script>
+                load('#back-to-top', './template/backtotop.html');
+            </script>
 
-                </div>  
-                
-           </div>
-       </main>
-
-        <!-- Back to top Button -->
-        <div class="back-to-top d-lg-none" id="back-to-top"></div>
-        <script>
-            load("#back-to-top", "./template/backtotop.html")
-        </script>
-
-        <!-- Alert for work -->
-        <!-- <div class="alter-for-work" id="alter-for-work"></div>
+            <!-- Alert for work -->
+            <!-- <div class="alter-for-work" id="alter-for-work"></div>
         <script>
             load("#alter-for-work", "./template/alter-for-work.html")
         </script> -->
-    
-        <!-- Footer -->
-        <footer class="footer" id="footer"></footer>
-        <script>
-            load("#footer", "./template/footer.html");
-        </script>
-        
 
-   </div>
-</body>
+            <!-- Footer -->
+            <footer class="footer" id="footer"></footer>
+            <script>
+                load('#footer', './template/footer.html');
+            </script>
+        </div>
+
+        <div class="more-work">
+            <div class="container">
+                <h4 class="more-work__heading">More Works By Vu Thi Thao Giang</h4>
+            </div>
+            <div class="more-work__inner">
+                <div class="container">
+                    <div class="row row-cols-4 row-cols-lg-2 row-cols-md-1 g-3">
+                        <div class="col">
+                            <div class="">
+                                <img alt="" src="./assets/icons/logo.svg" style="height: 22px" />
+                                <span>vuthithaogiang</span>
+                            </div>
+                        </div>
+                        <div class="col">Column 2</div>
+                        <div class="col">Column 3</div>
+                        <div class="col">Column 4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

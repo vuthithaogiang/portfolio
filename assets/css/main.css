@@ -2354,4 +2354,25 @@ body {
   border: 2px solid #6aa5dc;
 }
 
+.more-work__heading {
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--text-color);
+}
+.more-work__inner {
+  padding: 40px 0;
+  width: 100%;
+  min-height: 400px;
+  background-image: url(https://f8n-production.imgix.net/collections/3amzbvmgr-cover-collection.png?q=50&auto=format%2Ccompress&fit=crop&max-w=1200&max-h=596&exp=-5&blur=180);
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: #000;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /*# sourceMappingURL=main.css.map */
