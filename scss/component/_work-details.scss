@@ -109,7 +109,7 @@
         font-size: 1.7rem;
         font-weight: 400;
         line-height: 1.4;
-        color: #333;
+        color: var(--work-detail-text-color);
 
         @include abstracts.breakpoint(lg) {
             max-width: 90%;
