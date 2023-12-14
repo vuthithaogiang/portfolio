@@ -214,9 +214,22 @@
         &.bg-beig-1 {
             background-color: #fff6ed;
         }
+        &.bg-beig-2 {
+            background-color: #fffcf4;
+        }
         &.bg-blue {
             background-color: #f2f4f6;
         }
+        &.bg-white {
+            background-color: #fff;
+        }
+        &.bg-brown {
+            background-color: #2e2100;
+        }
+    }
+
+    &__picture:nth-child(1) {
+        box-shadow: 0px 16px 32px #9292921a;
     }
 
     &__picture + &__picture {
