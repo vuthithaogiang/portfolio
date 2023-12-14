@@ -2,6 +2,8 @@
 
 .project-card {
     &__inner {
+        background-color: #fff;
+        border-radius: 6px;
     }
 
     &__thumb {
@@ -24,14 +26,14 @@
 
     &__sub-thumb {
         flex: 1;
-        height: 70px;
-
+        height: 74px;
         background-color: #e9e9ee;
 
         img {
             display: block;
             width: 100%;
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
         }
     }
 

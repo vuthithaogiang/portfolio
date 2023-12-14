@@ -1,7 +1,7 @@
 @use '../abstracts';
 
-.work-details{ 
-    &__center{
+.work-details {
+    &__center {
         margin: 0 auto;
 
         @include abstracts.breakpoint(lg) {
@@ -9,8 +9,11 @@
             width: 100%;
         }
     }
+    &__space-between {
+        justify-content: space-between;
+    }
 
-    &__header{
+    &__header {
         padding: 24px 0 12px;
         margin-bottom: 24px;
         position: sticky;
@@ -21,23 +24,21 @@
         @include abstracts.breakpoint(lg) {
             margin-bottom: 10px;
         }
-        
     }
-    &__header-inner{
+
+    &__header-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 60px;
     }
 
-    &__nav{
+    &__nav {
         display: flex;
         align-items: center;
         gap: 16px;
-        
-
     }
-    &__title{
+    &__title {
         color: var(--text-color);
         font-size: 2.2rem;
         font-weight: 500;
@@ -52,34 +53,33 @@
             font-size: 1.8rem;
         }
     }
-    &__link{
+    &__link {
         flex-shrink: 0;
-        background-color: var( --about-me-tag-hover-bg-color);
+        background-color: var(--about-me-tag-hover-bg-color);
         font-size: 1.4rem;
         font-weight: 500;
-        color: var( --about-me-tag-hover-text-color) !important;
+        color: var(--about-me-tag-hover-text-color) !important;
         cursor: pointer;
         padding: 12px 18px;
-        border-radius: 8px;;
-
+        border-radius: 8px;
     }
 
-    &__action{
+    &__action {
         cursor: pointer;
-      
+
         img {
             width: 16px;
             filter: var(--about-me-icon-color);
         }
     }
-  
-    &__notification{
-       // margin-top: 16px;
+
+    &__notification {
+        // margin-top: 16px;
         display: flex;
         align-items: center;
         gap: 8px;
 
-        &--tag{
+        &--tag {
             color: #4daa57;
             font-weight: 500;
             font-size: 1.4rem;
@@ -87,7 +87,7 @@
         }
     }
 
-    &__img{
+    &__img {
         max-width: 100%;
         object-fit: contain;
         display: block;
@@ -103,12 +103,13 @@
         }
     }
 
-    &__desc{
+    &__desc {
         max-width: 60%;
         margin: 40px auto;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         font-weight: 400;
         line-height: 1.4;
+        color: #333;
 
         @include abstracts.breakpoint(lg) {
             max-width: 90%;
@@ -116,7 +117,5 @@
             font-size: 1.6rem;
             font-weight: 500;
         }
-       
     }
-
 }

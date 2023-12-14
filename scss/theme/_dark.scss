@@ -1,10 +1,10 @@
-html.dark{
+html.dark {
     --text-color: #fff;
-    --icon-filter-color: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(599%) hue-rotate(285deg) brightness(114%) contrast(100%);
+    --icon-filter-color: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(599%) hue-rotate(285deg)
+        brightness(114%) contrast(100%);
 
     --bg-color: #333;
     --button-bg-color: #1a1919;
-    
 
     --bg-overlay-intro-thumb: linear-gradient(142deg, rgb(127 127 127 / 58%) 1.8%, rgb(147 137 137 / 66%) 99.75%);
     --tag-item-text-color: #b4b3c6;
@@ -13,7 +13,7 @@ html.dark{
     --separate-bg-color: #4e4e60;
 
     --button-switch-theme-color: #1a1919;
-   
+
     --back-to-top-bg-color: #454b56;
     --back-to-top-bg-hover-color: #bdbdbd;
 
@@ -28,7 +28,8 @@ html.dark{
     --footer-separate-bg-color: #696969;
 
     --about-me-text-link-color: #cfcfcf;
-    --about-me-icon-color: brightness(0) saturate(100%) invert(74%) sepia(35%) saturate(15%) hue-rotate(315deg) brightness(105%) contrast(93%);
+    --about-me-icon-color: brightness(0) saturate(100%) invert(74%) sepia(35%) saturate(15%) hue-rotate(315deg)
+        brightness(105%) contrast(93%);
     --about-me-bg-tag-color: #4b4b4b;
     --about-me-location-bg-clor: #393838;
     --about-me-tag-hover-text-color: #333;
@@ -36,5 +37,10 @@ html.dark{
 
     --slider-border-color: #6f6464;
 
-    --logo-filter:  brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(137deg) brightness(103%) contrast(101%);
+    --logo-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(137deg) brightness(103%)
+        contrast(101%);
+
+    --project-detail-tag-color: #ececec;
+    --project-detail-separate-bg-color: #505050;
+    --project-detail-text-color: #fbfbfb;
 }

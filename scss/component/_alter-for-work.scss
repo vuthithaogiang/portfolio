@@ -1,10 +1,10 @@
 @use '../abstracts';
 
-.alter-for-work{
+.alter-for-work {
     position: fixed;
     z-index: 13;
     bottom: 50px;
-    left:  80px;
+    left: 80px;
     display: none;
 
     @include abstracts.breakpoint(lg) {
@@ -13,22 +13,28 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    
 
     background-color: var(--alter-for--work-bg-color);
     box-shadow: 0px 20px 60px #100c0c33;
     border-radius: 14px;
 
-    &__inner{
+    @include abstracts.breakpoint(md) {
+        border-radius: 8px;
+    }
+
+    &__inner {
         position: relative;
         padding: 24px 38px;
 
+        @include abstracts.breakpoint(md) {
+            padding: 14px 26px;
+        }
     }
 
-    &__sticky-widget-avatar{
+    &__sticky-widget-avatar {
         position: absolute;
         top: 50%;
-        
+
         left: -30px;
         width: 44px;
         height: 44px;
@@ -36,16 +42,15 @@
 
         transform: translateY(-50%);
 
-        .avatar{
+        .avatar {
             width: 100%;
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid #fff;
-
         }
     }
 
-    &__hide-alter{
+    &__hide-alter {
         cursor: pointer;
         position: absolute;
         top: 0;
@@ -60,49 +65,53 @@
 
         transform: translate(50%, -50%);
 
-        img{
+        img {
             width: 11px;
-            filter:  brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(599%) hue-rotate(285deg) brightness(114%) contrast(100%);
+            filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(599%) hue-rotate(285deg)
+                brightness(114%) contrast(100%);
         }
-
     }
 
-    &__content{
-
-        p{
-            position: relative;;
+    &__content {
+        p {
+            position: relative;
             margin-bottom: 12px;
             font-weight: 500;
             padding-left: 18px;
             color: var(--text-color);
 
-            &::before{
+            @include abstracts.breakpoint(md) {
+                font-size: 1.4rem;
+            }
+
+            &::before {
                 position: absolute;
                 top: 50%;
                 left: 0px;
                 display: block;
-                content: "";
+                content: '';
                 width: 8px;
                 height: 8px;
                 background-color: #2bca2b;
                 border-radius: 50%;
                 transform: translateY(-50%);
 
+                @include abstracts.breakpoint(md) {
+                    width: 6px;
+                    height: 6px;
+                }
             }
-
         }
 
-        a{
+        a {
             display: block;
             text-align: center;
-            
+
             background-color: #333;
             color: #fff;
             cursor: pointer;
             padding: 12px 18px;
             border-radius: 99px;
-         
         }
-
     }
 }

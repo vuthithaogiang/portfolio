@@ -1,0 +1,291 @@
+@use '../abstracts';
+
+.project-detail {
+    &__header {
+        padding-top: 20px;
+        @include abstracts.breakpoint(lg) {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: var(--bg-color);
+            padding-bottom: 12px;
+        }
+    }
+    .big {
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+        }
+    }
+    &__header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+    &__column {
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    &__title {
+        color: var(--text-color);
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        word-break: break-all;
+
+        @include abstracts.breakpoint(md) {
+            font-size: 1.8rem;
+        }
+    }
+    &__link {
+        flex-shrink: 0;
+        background-color: var(--about-me-tag-hover-bg-color);
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--about-me-tag-hover-text-color) !important;
+        cursor: pointer;
+        padding: 12px 18px;
+        border-radius: 8px;
+    }
+
+    &__action {
+        cursor: pointer;
+
+        img {
+            width: 16px;
+            filter: var(--about-me-icon-color);
+        }
+    }
+
+    &__notification {
+        // margin-top: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &--tag {
+            color: #4daa57;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+    }
+    &__left {
+        position: sticky;
+        background-color: var(--bg-color);
+        top: 0;
+        z-index: 20;
+        padding-right: 84px;
+        padding-top: 24px;
+
+        @include abstracts.breakpoint(lg) {
+            position: initial;
+            padding-right: 0;
+        }
+    }
+    &__desc {
+        p {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            font-weight: 400;
+            color: var(--project-detail-tag-color);
+        }
+        p + p {
+            margin-top: 12px;
+        }
+    }
+
+    &__wrap-thumb {
+        width: 50%;
+        margin-bottom: 16px;
+        @include abstracts.breakpoint(lg) {
+            width: 40%;
+        }
+
+        img {
+            border-radius: 6px;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__right {
+        padding-top: 20px;
+        padding-bottom: 60px;
+
+        @include abstracts.breakpoint(lg) {
+            padding-bottom: 0px;
+        }
+    }
+
+    &__group-sofware {
+        margin-top: 12px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        span {
+            height: 26px;
+        }
+
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__source-code {
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        a {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break: break-all;
+            color: var(--project-detail-tag-color);
+        }
+    }
+
+    .react-icon {
+        filter: brightness(0) saturate(100%) invert(62%) sepia(50%) saturate(2732%) hue-rotate(149deg) brightness(106%)
+            contrast(103%);
+    }
+
+    .sass-icon {
+        filter: brightness(0) saturate(100%) invert(34%) sepia(76%) saturate(1807%) hue-rotate(317deg) brightness(93%)
+            contrast(93%);
+    }
+
+    .js-icon {
+        filter: brightness(0) saturate(100%) invert(73%) sepia(73%) saturate(399%) hue-rotate(357deg) brightness(89%)
+            contrast(94%);
+    }
+
+    .html-icon {
+        filter: brightness(0) saturate(100%) invert(56%) sepia(79%) saturate(5280%) hue-rotate(348deg) brightness(99%)
+            contrast(96%);
+    }
+    .css-icon {
+        filter: brightness(0) saturate(100%) invert(29%) sepia(99%) saturate(1070%) hue-rotate(188deg) brightness(84%)
+            contrast(83%);
+    }
+
+    &__picture {
+        border-radius: 8px;
+        overflow: hidden;
+        height: 460px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include abstracts.breakpoint(lg) {
+            height: 300px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        &.bg-black {
+            background-color: #000;
+        }
+    }
+
+    &__picture + &__picture {
+        margin-top: 40px;
+        @include abstracts.breakpoint(lg) {
+            margin-top: 20px;
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        line-height: 1.4;
+        max-width: 80%;
+        margin: 30px auto;
+        color: var(--project-detail-text-color);
+        font-size: 1.7rem;
+        @include abstracts.breakpoint(lg) {
+            max-width: 100%;
+            margin: 20px auto;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__separate {
+        width: 100%;
+        height: 1px;
+        background-color: var(--project-detail-separate-bg-color);
+        margin: 30px 0;
+
+        @include abstracts.breakpoint(lg) {
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__other {
+        p {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            font-weight: 500;
+            color: var(--project-detail-tag-color);
+            margin-bottom: 20px;
+        }
+    }
+
+    &__more-projects-mobile {
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__wrap-thumb-mobile {
+        @include abstracts.breakpoint(lg) {
+            width: 66%;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: 6px;
+            }
+        }
+    }
+
+    &__more-projects-mobile-title {
+        @include abstracts.breakpoint(lg) {
+            font-size: 1.4rem;
+            line-height: 1.4;
+            font-weight: 500;
+            color: var(--project-detail-tag-color);
+            margin-bottom: 16px;
+        }
+    }
+}
