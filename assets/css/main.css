@@ -2541,7 +2541,6 @@ body {
 }
 
 .project-card__inner {
-  background-color: #fff;
   border-radius: 6px;
 }
 .project-card__thumb img {
@@ -2562,12 +2561,21 @@ body {
   flex: 1;
   height: 74px;
   background-color: #e9e9ee;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 767.98px) {
+  .project-card__sub-thumb {
+    height: 90px;
+  }
 }
 .project-card__sub-thumb img {
   display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  width: 90%;
+  max-height: 90%;
+  object-fit: cover;
 }
 .project-card__sub-thumb:nth-child(1) {
   border-bottom-left-radius: 6px;
@@ -2782,6 +2790,9 @@ body {
 }
 .project-detail__picture.bg-blue-2 {
   background-color: #f5fafe;
+}
+.project-detail__picture.bg-blue-3 {
+  background-color: #10375c;
 }
 .project-detail__picture.bg-white {
   background-color: #fff;

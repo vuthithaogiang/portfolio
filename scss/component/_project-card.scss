@@ -2,7 +2,7 @@
 
 .project-card {
     &__inner {
-        background-color: #fff;
+        // background-color: #fff;
         border-radius: 6px;
     }
 
@@ -28,12 +28,20 @@
         flex: 1;
         height: 74px;
         background-color: #e9e9ee;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include abstracts.breakpoint(md) {
+            height: 90px;
+        }
 
         img {
             display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            width: 90%;
+            max-height: 90%;
+            object-fit: cover;
         }
     }
 
