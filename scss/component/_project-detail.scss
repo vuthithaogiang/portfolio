@@ -186,6 +186,11 @@
             contrast(83%);
     }
 
+    .laravel-icon {
+        filter: brightness(0) saturate(100%) invert(44%) sepia(57%) saturate(5180%) hue-rotate(339deg) brightness(99%)
+            contrast(85%);
+    }
+
     &__picture {
         border-radius: 8px;
         overflow: hidden;
@@ -199,10 +204,24 @@
         }
 
         img {
-            display: block;
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
+        }
+
+        &.height-auto {
+            height: auto;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+
+                object-fit: cover;
+            }
+
+            @include abstracts.breakpoint(lg) {
+                height: auto;
+            }
         }
         &.bg-black {
             background-color: #000;
@@ -235,10 +254,6 @@
         &.bg-brown {
             background-color: #2e2100;
         }
-    }
-
-    &__picture:nth-child(1) {
-        //box-shadow: 0px 16px 32px #9292921a;
     }
 
     &__picture + &__picture {
