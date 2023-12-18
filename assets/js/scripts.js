@@ -25,7 +25,7 @@ function load(selector, path) {
             }
         })
         .finally(() => {
-            window.dispatchEvent(new Event("template-loaded"));
+            window.dispatchEvent(new Event('template-loaded'));
         });
 }
 
@@ -36,13 +36,13 @@ function load(selector, path) {
 function isHidden(element) {
     if (!element) return true;
 
-    if (window.getComputedStyle(element).display === "none") {
+    if (window.getComputedStyle(element).display === 'none') {
         return true;
     }
 
     let parent = element.parentElement;
     while (parent) {
-        if (window.getComputedStyle(parent).display === "none") {
+        if (window.getComputedStyle(parent).display === 'none') {
             return true;
         }
         parent = parent.parentElement;
@@ -73,21 +73,21 @@ function debounce(func, timeout = 300) {
  * 2. CSS "left" cho arrow qua biến "--arrow-left-pos"
  */
 const calArrowPos = debounce(() => {
-    if (isHidden($(".js-dropdown-list"))) return;
+    if (isHidden($('.js-dropdown-list'))) return;
 
-    const items = $$(".js-dropdown-list > li");
+    const items = $$('.js-dropdown-list > li');
 
     items.forEach((item) => {
         const arrowPos = item.offsetLeft + item.offsetWidth / 2;
-        item.style.setProperty("--arrow-left-pos", `${arrowPos}px`);
+        item.style.setProperty('--arrow-left-pos', `${arrowPos}px`);
     });
 });
 
 // Tính toán lại vị trí arrow khi resize trình duyệt
-window.addEventListener("resize", calArrowPos);
+window.addEventListener('resize', calArrowPos);
 
 // Tính toán lại vị trí arrow sau khi tải template
-window.addEventListener("template-loaded", calArrowPos);
+window.addEventListener('template-loaded', calArrowPos);
 
 /**
  * Giữ active menu khi hover
@@ -97,12 +97,12 @@ window.addEventListener("template-loaded", calArrowPos);
  * 2. Thêm class "js-dropdown" vào class "dropdown" hiện tại
  *  nếu muốn reset lại item active khi ẩn menu
  */
-window.addEventListener("template-loaded", handleActiveMenu);
+window.addEventListener('template-loaded', handleActiveMenu);
 
 function handleActiveMenu() {
-    const dropdowns = $$(".js-dropdown");
-    const menus = $$(".js-menu-list");
-    const activeClass = "menu-column__item--active";
+    const dropdowns = $$('.js-dropdown');
+    const menus = $$('.js-menu-list');
+    const activeClass = 'menu-column__item--active';
 
     const removeActive = (menu) => {
         menu.querySelector(`.${activeClass}`)?.classList.remove(activeClass);
@@ -146,11 +146,11 @@ function handleActiveMenu() {
  * <button class="js-toggle" toggle-target="#box">Click</button>
  * <div id="box">Content show/hide</div>
  */
-window.addEventListener("template-loaded", initJsToggle);
+window.addEventListener('template-loaded', initJsToggle);
 
 function initJsToggle() {
-    $$(".js-toggle").forEach((button) => {
-        const target = button.getAttribute("toggle-target");
+    $$('.js-toggle').forEach((button) => {
+        const target = button.getAttribute('toggle-target');
         if (!target) {
             document.body.innerText = `Cần thêm toggle-target cho: ${button.outerHTML}`;
         }
@@ -160,16 +160,16 @@ function initJsToggle() {
             if (!$(target)) {
                 return (document.body.innerText = `Không tìm thấy phần tử "${target}"`);
             }
-            const isHidden = $(target).classList.contains("hide");
+            const isHidden = $(target).classList.contains('hide');
 
             requestAnimationFrame(() => {
-                $(target).classList.toggle("hide", !isHidden);
-                $(target).classList.toggle("show", isHidden);
+                $(target).classList.toggle('hide', !isHidden);
+                $(target).classList.toggle('show', isHidden);
             });
         };
         document.onclick = function (e) {
             if (!e.target.closest(target)) {
-                const isHidden = $(target).classList.contains("hide");
+                const isHidden = $(target).classList.contains('hide');
                 if (!isHidden) {
                     button.click();
                 }
@@ -178,26 +178,26 @@ function initJsToggle() {
     });
 }
 
-window.addEventListener("template-loaded", () => {
-    const links = $$(".js-dropdown-list > li > a");
+window.addEventListener('template-loaded', () => {
+    const links = $$('.js-dropdown-list > li > a');
 
     links.forEach((link) => {
         link.onclick = () => {
             if (window.innerWidth > 991) return;
-            const item = link.closest("li");
-            item.classList.toggle("navbar__item--active");
+            const item = link.closest('li');
+            item.classList.toggle('navbar__item--active');
         };
     });
 });
 
-window.addEventListener("template-loaded", () => {
-    const tabsSelector = "profile-subnav__item";
-    const contentsSelector = "profile-subnav__content";
+window.addEventListener('template-loaded', () => {
+    const tabsSelector = 'profile-subnav__item';
+    const contentsSelector = 'profile-subnav__content';
 
     const tabActive = `${tabsSelector}--current`;
     const contentActive = `${contentsSelector}--current`;
 
-    const tabContainers = $$(".js-tabs");
+    const tabContainers = $$('.js-tabs');
     tabContainers.forEach((tabContainer) => {
         const tabs = tabContainer.querySelectorAll(`.${tabsSelector}`);
         const contents = tabContainer.querySelectorAll(`.${contentsSelector}`);
@@ -212,104 +212,87 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
-window.addEventListener("template-loaded", () => {
-    const switchBtn = document.querySelector("#switch-theme-btn");
+window.addEventListener('template-loaded', () => {
+    const switchBtn = document.querySelector('#switch-theme-btn');
     if (switchBtn) {
         switchBtn.onclick = function () {
-            const isDark = localStorage.dark === "true";
-            document.querySelector("html").classList.toggle("dark", !isDark);
-            localStorage.setItem("dark", !isDark);
-            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
+            const isDark = localStorage.dark === 'true';
+            document.querySelector('html').classList.toggle('dark', !isDark);
+            localStorage.setItem('dark', !isDark);
+            switchBtn.querySelector('span').textContent = isDark ? 'Dark mode' : 'Light mode';
         };
-        const isDark = localStorage.dark === "true";
-        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+        const isDark = localStorage.dark === 'true';
+        switchBtn.querySelector('span').textContent = isDark ? 'Light mode' : 'Dark mode';
     }
 });
 
-const isDark = localStorage.dark === "true";
-document.querySelector("html").classList.toggle("dark", isDark);
-
-
+const isDark = localStorage.dark === 'true';
+document.querySelector('html').classList.toggle('dark', isDark);
 
 // Scroll to the top when the button is clicked
 function goToTop() {
-
     window.scrollTo({
         top: 0,
         behavior: 'smooth',
     });
-  //  document.body.scrollTop = 0; // For Safari
-  //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    //  document.body.scrollTop = 0; // For Safari
+    //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
 
-
-window.addEventListener("template-loaded", () => {
+window.addEventListener('template-loaded', () => {
     // GO TO TOP
-   var alterforwork = document.getElementById("alter-for-work");
-   var goToTopBtn = document.getElementById("back-to-top-btn");
-   var btnHide = document.getElementById("hide-notification");
+    var alterforwork = document.getElementById('alter-for-work');
+    var goToTopBtn = document.getElementById('back-to-top-btn');
+    var btnHide = document.getElementById('hide-notification');
 
-   
+    // Show or hide the button based on the scroll position
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            goToTopBtn.style.display = 'block';
+            alterforwork.style.display = 'block';
+        } else {
+            goToTopBtn.style.display = 'none';
+            alterforwork.style.display = 'none';
+        }
 
-   // Show or hide the button based on the scroll position
-   window.onscroll = function() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        goToTopBtn.style.display = "block";
-     alterforwork.style.display = "block";
-      
-    } else {
-        goToTopBtn.style.display = "none";
-        alterforwork.style.display = "none";
-       
-    }
-
-    btnHide.onclick = () => {
-        alterforwork.style.display = "none";
-    }
-};
-
+        btnHide.onclick = () => {
+            alterforwork.style.display = 'none';
+        };
+    };
 });
 
-window.addEventListener("template-loaded", ()=> {
+window.addEventListener('template-loaded', () => {
+    // createThumbnails();
 
-   // createThumbnails();
-
-
-    let currentSlide = 0
-    const slider = document.getElementById("slider");
-    const slides = document.getElementsByClassName("slider__wrapimage");
-   
+    let currentSlide = 0;
+    const slider = document.getElementById('slider');
+    const slides = document.getElementsByClassName('slider__wrapimage');
 
     function showSlide(index) {
         if (index >= slides.length) {
             currentSlide = 0;
-          } else if (index < 0) {
+        } else if (index < 0) {
             currentSlide = slides.length - 1;
-          } else {
+        } else {
             currentSlide = index;
-          }
-          const thumbnails = document.getElementsByClassName("thumbnail");
-          const displacement = -currentSlide * 100 + "%";
-          slider.style.transform = "translateX(" + displacement + ")";
-      
-          // Highlight the current thumbnail
-          for (let i = 0; i < thumbnails.length; i++) {
-            thumbnails[i].classList.remove("active");
-          }
-          thumbnails[currentSlide].classList.add("active");
-      
+        }
+        const thumbnails = document.getElementsByClassName('thumbnail');
+        const displacement = -currentSlide * 100 + '%';
+        slider.style.transform = 'translateX(' + displacement + ')';
+
+        // Highlight the current thumbnail
+        for (let i = 0; i < thumbnails.length; i++) {
+            thumbnails[i].classList.remove('active');
+        }
+        thumbnails[currentSlide].classList.add('active');
     }
-    const preSlide = document.getElementById("prev");
-    const nextSlide = document.getElementById("next");
+    const preSlide = document.getElementById('prev');
+    const nextSlide = document.getElementById('next');
 
     preSlide.onclick = () => {
         showSlide(currentSlide - 1);
-
-    }
+    };
     nextSlide.onclick = () => {
-        showSlide(currentSlide + 1)
-    }
-
-})
-
-
+        showSlide(currentSlide + 1);
+    };
+});
