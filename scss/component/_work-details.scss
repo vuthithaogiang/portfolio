@@ -101,26 +101,26 @@
     }
 
     &__img + &__img {
-        margin-top: 40px;
+        margin-top: 60px;
 
         @include abstracts.breakpoint(lg) {
-            margin-top: 24px;
+            margin-top: 32px;
         }
     }
 
     &__desc {
         max-width: 60%;
         margin: 40px auto;
-        font-size: 1.7rem;
+        font-size: 1.8rem;
         font-weight: 400;
         line-height: 1.4;
         color: var(--work-detail-text-color);
 
         @include abstracts.breakpoint(lg) {
-            max-width: 90%;
+            max-width: 100%;
             margin: 20px auto;
             font-size: 1.6rem;
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 }
