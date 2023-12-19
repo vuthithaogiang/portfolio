@@ -2290,6 +2290,12 @@ body {
   border-radius: 8px;
   margin: 0 auto;
 }
+@media (max-width: 991.98px) {
+  .work-details__img {
+    min-height: 300px;
+    object-fit: cover;
+  }
+}
 .work-details__img + .work-details__img {
   margin-top: 40px;
 }
