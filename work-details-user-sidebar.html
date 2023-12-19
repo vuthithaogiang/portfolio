@@ -35,7 +35,7 @@
                                 <a class="work-details__action" href="index.html">
                                     <img class="icon" alt="" src="./assets/icons/arrow-left.svg" />
                                 </a>
-                                <h2 class="work-details__title">Healthy Food Manage</h2>
+                                <h2 class="work-details__title">Web Component - User Profile</h2>
                             </div>
 
                             <a class="work-details__link d-md-none" href="mailto:vuthithaogiang050400@gmail.com"
@@ -56,89 +56,11 @@
                     <!-- Content -->
 
                     <div class="work-details__content">
-                        <div class="slider">
-                            <div id="slider-container" class="slider__container">
-                                <div id="slider" class="slider__wrap">
-                                    <div class="slider__wrapimage">
-                                        <img
-                                            class="slider__img"
-                                            src="./assets/images/project-details-healthy-food-admin-1.png"
-                                            alt="Image 1"
-                                        />
-                                    </div>
-
-                                    <div class="slider__wrapimage">
-                                        <img
-                                            class="slider__img"
-                                            alt=""
-                                            src="./assets/images/project-details-healthy-food-admin-2.png"
-                                        />
-                                    </div>
-
-                                    <div class="slider__wrapimage">
-                                        <img
-                                            class="slider__img"
-                                            alt=""
-                                            src="./assets/images/project-details-healthy-food-admin-3.png"
-                                        />
-                                    </div>
-                                    <div class="slider__wrapimage">
-                                        <img
-                                            class="slider__img"
-                                            alt=""
-                                            src="./assets/images/project-details-healthy-food-admin-4.png"
-                                        />
-                                    </div>
-
-                                    <!-- Add more slides as needed -->
-                                </div>
-
-                                <button id="prev" class="slider__btn d-none">
-                                    <img class="icon" alt="" src="./assets/icons/arrow-left.svg" />
-                                </button>
-                                <button id="next" class="slider__btn d-none">
-                                    <img class="icon" alt="" src="./assets/icons/arrow-right.svg" />
-                                </button>
-                            </div>
-
-                            <div id="thumbnail-container"></div>
-                            <script>
-                                const thumbnailContainer = document.getElementById('thumbnail-container');
-                                const slides = document.getElementsByClassName('slider__wrapimage');
-
-                                for (let i = 0; i < slides.length; i++) {
-                                    const thumbnail = document.createElement('img');
-                                    thumbnail.src = slides[i].querySelector('img').src;
-                                    thumbnail.alt = 'Thumbnail ' + (i + 1);
-                                    thumbnail.classList.add('thumbnail');
-                                    thumbnail.addEventListener('click', () => showSlide(i));
-                                    thumbnailContainer.appendChild(thumbnail);
-                                    console.log(i);
-                                }
-
-                                // Highlight the first thumbnail initially
-                                thumbnailContainer.children[0].classList.add('active');
-
-                                function showSlide(index) {
-                                    if (index >= slides.length) {
-                                        currentSlide = 0;
-                                    } else if (index < 0) {
-                                        currentSlide = slides.length - 1;
-                                    } else {
-                                        currentSlide = index;
-                                    }
-
-                                    const displacement = -currentSlide * 100 + '%';
-                                    slider.style.transform = 'translateX(' + displacement + ')';
-                                    const thumbnails = document.getElementsByClassName('thumbnail');
-                                    // Highlight the current thumbnail
-                                    for (let i = 0; i < thumbnails.length; i++) {
-                                        thumbnails[i].classList.remove('active');
-                                    }
-                                    thumbnails[currentSlide].classList.add('active');
-                                }
-                            </script>
-                        </div>
+                        <img
+                            class="work-details__img"
+                            alt=""
+                            src="./assets/images/project-details-healthy-food-end-user-8.png"
+                        />
                     </div>
                 </div>
             </main>
