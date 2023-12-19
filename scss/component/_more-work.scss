@@ -65,14 +65,17 @@
     &__wrap-image {
         width: 100%;
         min-width: 330px;
-        // min-height: 400px;
+        //min-height: 330px;
 
         background-color: #f2f2f2;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        z-index: 1;
 
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 8px;
+
         position: relative;
         @include abstracts.breakpoint(md) {
             min-width: 290px;
@@ -81,12 +84,18 @@
     }
 
     &__img {
+        display: block;
+        height: 331px;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
         width: 100%;
 
-        object-fit: cover;
-        cursor: pointer;
+        object-fit: contain;
+        //  cursor: pointer;
+
+        &.cover {
+            object-fit: cover;
+        }
 
         @include abstracts.breakpoint(md) {
             border-top-right-radius: 6px;
@@ -111,7 +120,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             word-break: break-all;
-            cursor: pointer;
+            //cursor: pointer;
 
             @include abstracts.breakpoint(md) {
                 font-size: 1.7rem;
