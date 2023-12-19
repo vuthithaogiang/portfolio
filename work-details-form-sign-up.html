@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio | Vu Thi Thao Giang</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+        <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+
+        <!-- Scripts -->
+        <script src="./assets/js/scripts.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <main class="work-details row">
+                <div class="col-9 work-details__center">
+                    <!-- Header -->
+                    <div class="work-details__header">
+                        <div class="work-details__header-inner">
+                            <div class="work-details__nav">
+                                <a class="work-details__action" href="index.html">
+                                    <img class="icon" alt="" src="./assets/icons/arrow-left.svg" />
+                                </a>
+                                <h2 class="work-details__title">Web Component - Form Sign Up / Sign In</h2>
+                            </div>
+
+                            <a class="work-details__link d-md-none" href="mailto:vuthithaogiang050400@gmail.com"
+                                >Get in touch</a
+                            >
+                        </div>
+                        <div class="work-details__notification">
+                            <div class="loader">
+                                <div class="loader__circle">
+                                    <div class="loader__dot"></div>
+                                    <div class="loader__outline"></div>
+                                </div>
+                            </div>
+                            <div class="work-details__notification--tag">Available for work</div>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+
+                    <div class="work-details__content">
+                        <img
+                            class="work-details__img"
+                            alt=""
+                            src="./assets/images/project-details-healthy-food-end-user-5.png"
+                        />
+                    </div>
+                </div>
+            </main>
+
+            <!-- Back to top Button -->
+            <div class="back-to-top d-lg-none" id="back-to-top"></div>
+            <script>
+                load('#back-to-top', './template/backtotop.html');
+            </script>
+
+            <!-- Alert for work -->
+            <!-- <div class="alter-for-work" id="alter-for-work"></div>
+        <script>
+            load("#alter-for-work", "./template/alter-for-work.html")
+        </script> -->
+
+            <!-- Footer -->
+            <footer class="footer" id="footer"></footer>
+            <script>
+                load('#footer', './template/footer.html');
+            </script>
+        </div>
+        <!-- Suggets more work in the bottom -->
+        <div class="more-work">
+            <div class="container">
+                <h4 class="more-work__heading">More Works By Vu Thi Thao Giang</h4>
+            </div>
+            <div class="more-work__inner">
+                <div class="container">
+                    <div class="scroll-bar-responsive">
+                        <div class="col d-md-none">
+                            <div class="more-work__wrap-logo">
+                                <div>
+                                    <img alt="" src="./assets/icons/logo.svg" style="height: 22px" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="more-work__card">
+                                <div class="more-work__wrap-image">
+                                    <img
+                                        class="more-work__img"
+                                        alt=""
+                                        src="./assets/images/thumb-key-board-3d-not-color.png"
+                                    />
+                                </div>
+                                <h3 class="more-work__name">
+                                    <strong>The Cute Things</strong>
+                                    <img alt="" src="./assets/icons/logo.svg" style="height: 12px" />
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="more-work__card">
+                                <div class="more-work__wrap-image">
+                                    <img
+                                        class="more-work__img"
+                                        alt=""
+                                        src="./assets/images/lucy-pet-frame-square.png"
+                                    />
+                                </div>
+
+                                <h3 class="more-work__name">
+                                    <strong>Lucy Pet Landing Page</strong>
+                                    <img alt="" src="./assets/icons/logo.svg" style="height: 12px" />
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="more-work__card">
+                                <div class="more-work__wrap-image">
+                                    <img
+                                        class="more-work__img"
+                                        alt=""
+                                        src="./assets/images/pricing-dark-mode-frame-square.png"
+                                    />
+                                </div>
+                                <h3 class="more-work__name">
+                                    <strong> Pricing Table Dark Mode Pricing Table Dark Mode</strong>
+                                    <img alt="" src="./assets/icons/logo.svg" style="height: 12px" />
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-work__bottom">© 2023 Giang. All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
