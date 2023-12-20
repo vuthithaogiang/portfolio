@@ -245,19 +245,26 @@ window.addEventListener('template-loaded', () => {
     var goToTopBtn = document.getElementById('back-to-top-btn');
     var btnHide = document.getElementById('hide-notification');
 
+    alterforwork.style.display = 'block';
+
+    btnHide.onclick = () => {
+        alterforwork.style.display = 'none';
+        return;
+    };
+
     // Show or hide the button based on the scroll position
     window.onscroll = function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             goToTopBtn.style.display = 'block';
-            alterforwork.style.display = 'block';
+            //alterforwork.style.display = 'block';
         } else {
             goToTopBtn.style.display = 'none';
-            alterforwork.style.display = 'none';
+            // alterforwork.style.display = 'none';
         }
 
-        btnHide.onclick = () => {
-            alterforwork.style.display = 'none';
-        };
+        // } else {
+        //     alterforwork.style.display = 'none';
+        //
     };
 });
 
