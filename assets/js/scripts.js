@@ -235,7 +235,7 @@ function goToTop() {
         top: 0,
         behavior: 'smooth',
     });
-    //  document.body.scrollTop = 0; // For Safari
+    // document.body.scrollTop = 0; // For Safari
     //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
 
@@ -256,15 +256,12 @@ window.addEventListener('template-loaded', () => {
     window.onscroll = function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             goToTopBtn.style.display = 'block';
-            //alterforwork.style.display = 'block';
+            // alterforwork.style.display = 'block';
         } else {
             goToTopBtn.style.display = 'none';
             // alterforwork.style.display = 'none';
         }
 
-        // } else {
-        //     alterforwork.style.display = 'none';
-        //
     };
 });
 
